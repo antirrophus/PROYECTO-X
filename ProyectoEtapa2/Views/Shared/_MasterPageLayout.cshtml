@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+
+<script src="~/Scripts/jquery.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+    <title>SISTEMA XI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="~/Content/css/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/Content/css/bootstrap.css" rel="stylesheet">
+    <link href="~/Content/css/style.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <header>
+        <center>
+            <div class="container">
+
+
+                <div>
+                    <a href="@Url.Action("Inicio","Principal")"><img src="~/Content/img/logo uni.png" style="height: 129px; text-align:center; width: 215px;" /></a>
+                    <h1>aplicacion 5<!--Proyecto XI sistema experimental CYBERDYNE--></h1>
+                </div>
+
+
+            </div>
+
+        </center>
+    </header>
+
+    <div id="nav">
+        <nav class="navbar navbar-default navbar-static affix-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">logo UNI USER-1</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav"></ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li> <a href="@Url.Action("Administrar", "Administracion")#ancla1">ADMINISTRAR</a></li>
+                        <li> <a href="@Url.Action("PlanifAcadMain", "PlanificacionAcad")#ancla1">PLANIFICACIÓN ACADEMICA</a></li>
+                        <li> <a href="@Url.Action("ActivDocMain", "ActividadDocente")#ancla1">ACTIVIDAD DOCENTE</a></li>
+                        <li> <a href="@Url.Action("DocumentosVarios", "DocumentosV")#ancla4">DOCUMENTOS VARIOS</a></li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+        </nav>
+    </div>
+
+    @RenderBody()
+
+    <footer id="copyright">
+        <p>
+            <img src="~/Content/img/uni_blanco.png" />
+        </p>
+        <p></p>
+        <p>Copright by MAYORGA'S INDUSTRIES 2553, All rights reserved</p>
+        <!--<hr noshade="noshade" /> /no es responcitiva, hay que buscar como hacerla -->
+    </footer>
+
+    
+    <script>
+        $(function () {
+            $('a[href*=#]:not([href=#])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+
+        $(function () {
+            //navbar affix
+            $('#nav').affix({
+                offset: {
+                    top: $('header').height()
+                }
+            });
+        });
+
+
+
+
+        $(document).ready(function () {
+            $("[rel='tooltip']").tooltip();
+
+            $('.thumbnail').hover(
+                function () {
+                    $(this).find('.caption').fadeIn(250);
+                },
+                function () {
+                    $(this).find('.caption').fadeOut(205);
+                }
+            );
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,729 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="HIGADDv1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Asignaturas">
+    <Key>
+      <PropertyRef Name="id_asignatura" />
+    </Key>
+    <Property Name="id_asignatura" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="disciplina" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="nombre_discip" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tipo_discip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="año" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="prerrequisito" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="precedencia" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="creditos" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="horas" Type="Int32" Nullable="false" />
+    <Property Name="frecuencia_semanal" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="semestre" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="recursos" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_plantema" Type="Int32" />
+    <Property Name="id_carrera" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="id_plan_asignatura" Type="Int32" />
+    <NavigationProperty Name="Carreras" Relationship="Self.FK_Asignaturas_Carreras" FromRole="Asignaturas" ToRole="Carreras" />
+    <NavigationProperty Name="Plan_asignatura" Relationship="Self.FK_Asignaturas_Plan_asignatura" FromRole="Asignaturas" ToRole="Plan_asignatura" />
+    <NavigationProperty Name="Literatura_Doc" Relationship="Self.FK_Literatura_Doc_Asignaturas" FromRole="Asignaturas" ToRole="Literatura_Doc" />
+    <NavigationProperty Name="Plan_tematico" Relationship="Self.FK_Plan_tematico_Asignaturas" FromRole="Asignaturas" ToRole="Plan_tematico" />
+    <NavigationProperty Name="Prof_Asig" Relationship="Self.FK_Prof_Asig_Asignaturas" FromRole="Asignaturas" ToRole="Prof_Asig" />
+  </EntityType>
+  <EntityType Name="Carreras">
+    <Key>
+      <PropertyRef Name="id_carrera" />
+    </Key>
+    <Property Name="id_carrera" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="nombre_carrera" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="C__semestres" Type="Int32" Nullable="false" />
+    <Property Name="id_Facultad" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Asignaturas" Relationship="Self.FK_Asignaturas_Carreras" FromRole="Carreras" ToRole="Asignaturas" />
+    <NavigationProperty Name="Facultad" Relationship="Self.FK_Carreras_Facultad" FromRole="Carreras" ToRole="Facultad" />
+    <NavigationProperty Name="Grupos" Relationship="Self.FK_Grupos_Carreras" FromRole="Carreras" ToRole="Grupos" />
+    <NavigationProperty Name="Laboratorios" Relationship="Self.FK_Laboratorios_Carreras" FromRole="Carreras" ToRole="Laboratorios" />
+  </EntityType>
+  <EntityType Name="DCA">
+    <Key>
+      <PropertyRef Name="id_dca" />
+    </Key>
+    <Property Name="id_dca" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="35" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="semestre" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="departamento" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="fecha_e_dca" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="document" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="id_departameto" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Departamentos" Relationship="Self.FK_DCA_Departamentos" FromRole="DCA" ToRole="Departamentos" />
+  </EntityType>
+  <EntityType Name="Departamentos">
+    <Key>
+      <PropertyRef Name="id_departameto" />
+    </Key>
+    <Property Name="id_departameto" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="nombre_d" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_Facultad" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="DCA" Relationship="Self.FK_DCA_Departamentos" FromRole="Departamentos" ToRole="DCA" />
+    <NavigationProperty Name="Facultad" Relationship="Self.FK_Departamentos_Facultad" FromRole="Departamentos" ToRole="Facultad" />
+    <NavigationProperty Name="Profesor" Relationship="Self.FK_Profesor_Departamentos" FromRole="Departamentos" ToRole="Profesor" />
+  </EntityType>
+  <EntityType Name="Dia">
+    <Key>
+      <PropertyRef Name="id_dia" />
+    </Key>
+    <Property Name="id_dia" Type="Int32" Nullable="false" />
+    <Property Name="iniciales" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Horarios" Relationship="Self.FK_Horarios_Dia" FromRole="Dia" ToRole="Horarios" />
+  </EntityType>
+  <EntityType Name="Documentos">
+    <Key>
+      <PropertyRef Name="id_doc" />
+    </Key>
+    <Property Name="id_doc" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre" Type="String" MaxLength="35" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="fecha" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="contenido" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="observaciones" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="objetivos" Type="String" MaxLength="400" FixedLength="false" Unicode="false" />
+    <Property Name="documento" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="locacion" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="hora" Type="Time" Precision="7" />
+    <Property Name="fecha_e" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="ID_G_A_P_A" Type="Int32" />
+    <Property Name="tipo" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Grupo_Asig" Relationship="Self.FK__Documento__ID_G___1332DBDC" FromRole="Documentos" ToRole="Grupo_Asig" />
+  </EntityType>
+  <EntityType Name="Facultad">
+    <Key>
+      <PropertyRef Name="id_Facultad" />
+    </Key>
+    <Property Name="id_Facultad" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ubicacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="telefono" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Carreras" Relationship="Self.FK_Carreras_Facultad" FromRole="Facultad" ToRole="Carreras" />
+    <NavigationProperty Name="Departamentos" Relationship="Self.FK_Departamentos_Facultad" FromRole="Facultad" ToRole="Departamentos" />
+  </EntityType>
+  <EntityType Name="Grupo_Asig">
+    <Key>
+      <PropertyRef Name="ID_G_A_P_A" />
+    </Key>
+    <Property Name="ID_G_A_P_A" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_grupo" Type="Int32" />
+    <Property Name="fecha_ac" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="id_prof_asig" Type="Int32" />
+    <NavigationProperty Name="Documentos" Relationship="Self.FK__Documento__ID_G___1332DBDC" FromRole="Grupo_Asig" ToRole="Documentos" />
+    <NavigationProperty Name="Horarios" Relationship="Self.FK__Horarios__ID_G_A__17F790F9" FromRole="Grupo_Asig" ToRole="Horarios" />
+    <NavigationProperty Name="Grupos" Relationship="Self.FK_Grupo_Asig_Grupos" FromRole="Grupo_Asig" ToRole="Grupos" />
+    <NavigationProperty Name="Prof_Asig" Relationship="Self.FK_Grupo_Asig_Prof_Asig" FromRole="Grupo_Asig" ToRole="Prof_Asig" />
+  </EntityType>
+  <EntityType Name="Grupos">
+    <Key>
+      <PropertyRef Name="id_grupo" />
+    </Key>
+    <Property Name="id_grupo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="año" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="id_turno" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="id_semestre" Type="Int32" Nullable="false" />
+    <Property Name="id_carrera" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Carreras" Relationship="Self.FK_Grupos_Carreras" FromRole="Grupos" ToRole="Carreras" />
+    <NavigationProperty Name="Grupo_Asig" Relationship="Self.FK_Grupo_Asig_Grupos" FromRole="Grupos" ToRole="Grupo_Asig" />
+    <NavigationProperty Name="Semestre" Relationship="Self.FK_Grupos_Semestre" FromRole="Grupos" ToRole="Semestre" />
+    <NavigationProperty Name="Turnos" Relationship="Self.FK_Grupos_Turnos" FromRole="Grupos" ToRole="Turnos" />
+  </EntityType>
+  <EntityType Name="Horarios">
+    <Key>
+      <PropertyRef Name="id_horarios" />
+    </Key>
+    <Property Name="id_horarios" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="id_dia" Type="Int32" />
+    <Property Name="id_hora" Type="Int32" />
+    <Property Name="laboratorio" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ID_G_A_P_A" Type="Int32" />
+    <NavigationProperty Name="Dia" Relationship="Self.FK_Horarios_Dia" FromRole="Horarios" ToRole="Dia" />
+    <NavigationProperty Name="Grupo_Asig" Relationship="Self.FK__Horarios__ID_G_A__17F790F9" FromRole="Horarios" ToRole="Grupo_Asig" />
+    <NavigationProperty Name="Horas" Relationship="Self.FK_Horarios_Horas" FromRole="Horarios" ToRole="Horas" />
+  </EntityType>
+  <EntityType Name="Horas">
+    <Key>
+      <PropertyRef Name="id_hora" />
+    </Key>
+    <Property Name="id_hora" Type="Int32" Nullable="false" />
+    <Property Name="hora" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="bloque" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="turno" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Horarios" Relationship="Self.FK_Horarios_Horas" FromRole="Horas" ToRole="Horarios" />
+  </EntityType>
+  <EntityType Name="Laboratorios">
+    <Key>
+      <PropertyRef Name="id_lab" />
+    </Key>
+    <Property Name="id_lab" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="nombre_lab" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ubicacion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_carrera" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Carreras" Relationship="Self.FK_Laboratorios_Carreras" FromRole="Laboratorios" ToRole="Carreras" />
+  </EntityType>
+  <EntityType Name="Literatura_Doc">
+    <Key>
+      <PropertyRef Name="id_litdoc" />
+    </Key>
+    <Property Name="id_litdoc" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre_libro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="autor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="edicion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="año" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="presentacion_libro" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_asignatura" Type="Int32" />
+    <NavigationProperty Name="Asignaturas" Relationship="Self.FK_Literatura_Doc_Asignaturas" FromRole="Literatura_Doc" ToRole="Asignaturas" />
+  </EntityType>
+  <EntityType Name="PC">
+    <Key>
+      <PropertyRef Name="id_PC" />
+    </Key>
+    <Property Name="id_PC" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fecha_ela_pc" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="documento_pc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="id_prof_asig" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Prof_Asig" Relationship="Self.FK_PC_Prof_Asig" FromRole="PC" ToRole="Prof_Asig" />
+  </EntityType>
+  <EntityType Name="PDC">
+    <Key>
+      <PropertyRef Name="id_pdc" />
+    </Key>
+    <Property Name="id_pdc" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fecha_ela_pdc" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="documento_pdc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="id_prof_asig" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Prof_Asig" Relationship="Self.FK_PDC_Prof_Asig" FromRole="PDC" ToRole="Prof_Asig" />
+  </EntityType>
+  <EntityType Name="Plan_asignatura">
+    <Key>
+      <PropertyRef Name="id_plan_asignatura" />
+    </Key>
+    <Property Name="id_plan_asignatura" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="nombre_plan" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="año" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Asignaturas" Relationship="Self.FK_Asignaturas_Plan_asignatura" FromRole="Plan_asignatura" ToRole="Asignaturas" />
+  </EntityType>
+  <EntityType Name="Plan_tematico">
+    <Key>
+      <PropertyRef Name="id_plantema" />
+    </Key>
+    <Property Name="id_plantema" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="unidades" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="clase" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="clase_pract" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="lab" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="contenido" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="id_asignatura" Type="Int32" />
+    <NavigationProperty Name="Asignaturas" Relationship="Self.FK_Plan_tematico_Asignaturas" FromRole="Plan_tematico" ToRole="Asignaturas" />
+  </EntityType>
+  <EntityType Name="Prof_Asig">
+    <Key>
+      <PropertyRef Name="id_prof_asig" />
+    </Key>
+    <Property Name="id_prof_asig" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="horario_consulta" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="hora_clase" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="hora_cp" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="hora_lab" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="id_profesor" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="observaciones" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="id_asignatura" Type="Int32" />
+    <NavigationProperty Name="Asignaturas" Relationship="Self.FK_Prof_Asig_Asignaturas" FromRole="Prof_Asig" ToRole="Asignaturas" />
+    <NavigationProperty Name="Grupo_Asig" Relationship="Self.FK_Grupo_Asig_Prof_Asig" FromRole="Prof_Asig" ToRole="Grupo_Asig" />
+    <NavigationProperty Name="PC" Relationship="Self.FK_PC_Prof_Asig" FromRole="Prof_Asig" ToRole="PC" />
+    <NavigationProperty Name="PDC" Relationship="Self.FK_PDC_Prof_Asig" FromRole="Prof_Asig" ToRole="PDC" />
+    <NavigationProperty Name="Profesor" Relationship="Self.FK_Prof_Asig_Profesor" FromRole="Prof_Asig" ToRole="Profesor" />
+  </EntityType>
+  <EntityType Name="Profesor">
+    <Key>
+      <PropertyRef Name="id_profesor" />
+    </Key>
+    <Property Name="id_profesor" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="nombre_profesor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="apellido_profesor" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="telefono" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="cedula" Type="String" MaxLength="16" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="correo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="genero" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="fecha_ingreso" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="nivel_acad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tipo_carga" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="id_departameto" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="tipo_contrato" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="cargo" Type="Int32" />
+    <NavigationProperty Name="Departamentos" Relationship="Self.FK_Profesor_Departamentos" FromRole="Profesor" ToRole="Departamentos" />
+    <NavigationProperty Name="Prof_Asig" Relationship="Self.FK_Prof_Asig_Profesor" FromRole="Profesor" ToRole="Prof_Asig" />
+  </EntityType>
+  <EntityType Name="Semestre">
+    <Key>
+      <PropertyRef Name="id_semestre" />
+    </Key>
+    <Property Name="id_semestre" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="f_inicio" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="f_fin" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="nombre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="feriados" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="año_academico" Type="String" MaxLength="10" FixedLength="true" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Grupos" Relationship="Self.FK_Grupos_Semestre" FromRole="Semestre" ToRole="Grupos" />
+  </EntityType>
+  <EntityType Name="Turnos">
+    <Key>
+      <PropertyRef Name="id_turno" />
+    </Key>
+    <Property Name="id_turno" Type="String" MaxLength="1" FixedLength="true" Unicode="false" Nullable="false" />
+    <Property Name="nombre" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Grupos" Relationship="Self.FK_Grupos_Turnos" FromRole="Turnos" ToRole="Grupos" />
+  </EntityType>
+  <Association Name="FK_Asignaturas_Carreras">
+    <End Role="Carreras" Type="Self.Carreras" Multiplicity="0..1" />
+    <End Role="Asignaturas" Type="Self.Asignaturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Carreras">
+        <PropertyRef Name="id_carrera" />
+      </Principal>
+      <Dependent Role="Asignaturas">
+        <PropertyRef Name="id_carrera" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Asignaturas_Plan_asignatura">
+    <End Role="Plan_asignatura" Type="Self.Plan_asignatura" Multiplicity="0..1" />
+    <End Role="Asignaturas" Type="Self.Asignaturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Plan_asignatura">
+        <PropertyRef Name="id_plan_asignatura" />
+      </Principal>
+      <Dependent Role="Asignaturas">
+        <PropertyRef Name="id_plan_asignatura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Literatura_Doc_Asignaturas">
+    <End Role="Asignaturas" Type="Self.Asignaturas" Multiplicity="0..1" />
+    <End Role="Literatura_Doc" Type="Self.Literatura_Doc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Asignaturas">
+        <PropertyRef Name="id_asignatura" />
+      </Principal>
+      <Dependent Role="Literatura_Doc">
+        <PropertyRef Name="id_asignatura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Plan_tematico_Asignaturas">
+    <End Role="Asignaturas" Type="Self.Asignaturas" Multiplicity="0..1" />
+    <End Role="Plan_tematico" Type="Self.Plan_tematico" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Asignaturas">
+        <PropertyRef Name="id_asignatura" />
+      </Principal>
+      <Dependent Role="Plan_tematico">
+        <PropertyRef Name="id_asignatura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Prof_Asig_Asignaturas">
+    <End Role="Asignaturas" Type="Self.Asignaturas" Multiplicity="0..1" />
+    <End Role="Prof_Asig" Type="Self.Prof_Asig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Asignaturas">
+        <PropertyRef Name="id_asignatura" />
+      </Principal>
+      <Dependent Role="Prof_Asig">
+        <PropertyRef Name="id_asignatura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Carreras_Facultad">
+    <End Role="Facultad" Type="Self.Facultad" Multiplicity="0..1" />
+    <End Role="Carreras" Type="Self.Carreras" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Facultad">
+        <PropertyRef Name="id_Facultad" />
+      </Principal>
+      <Dependent Role="Carreras">
+        <PropertyRef Name="id_Facultad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Grupos_Carreras">
+    <End Role="Carreras" Type="Self.Carreras" Multiplicity="1" />
+    <End Role="Grupos" Type="Self.Grupos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Carreras">
+        <PropertyRef Name="id_carrera" />
+      </Principal>
+      <Dependent Role="Grupos">
+        <PropertyRef Name="id_carrera" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Laboratorios_Carreras">
+    <End Role="Carreras" Type="Self.Carreras" Multiplicity="1" />
+    <End Role="Laboratorios" Type="Self.Laboratorios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Carreras">
+        <PropertyRef Name="id_carrera" />
+      </Principal>
+      <Dependent Role="Laboratorios">
+        <PropertyRef Name="id_carrera" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DCA_Departamentos">
+    <End Role="Departamentos" Type="Self.Departamentos" Multiplicity="0..1" />
+    <End Role="DCA" Type="Self.DCA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamentos">
+        <PropertyRef Name="id_departameto" />
+      </Principal>
+      <Dependent Role="DCA">
+        <PropertyRef Name="id_departameto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Departamentos_Facultad">
+    <End Role="Facultad" Type="Self.Facultad" Multiplicity="0..1" />
+    <End Role="Departamentos" Type="Self.Departamentos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Facultad">
+        <PropertyRef Name="id_Facultad" />
+      </Principal>
+      <Dependent Role="Departamentos">
+        <PropertyRef Name="id_Facultad" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Profesor_Departamentos">
+    <End Role="Departamentos" Type="Self.Departamentos" Multiplicity="0..1" />
+    <End Role="Profesor" Type="Self.Profesor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departamentos">
+        <PropertyRef Name="id_departameto" />
+      </Principal>
+      <Dependent Role="Profesor">
+        <PropertyRef Name="id_departameto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Horarios_Dia">
+    <End Role="Dia" Type="Self.Dia" Multiplicity="0..1" />
+    <End Role="Horarios" Type="Self.Horarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Dia">
+        <PropertyRef Name="id_dia" />
+      </Principal>
+      <Dependent Role="Horarios">
+        <PropertyRef Name="id_dia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Documento__ID_G___1332DBDC">
+    <End Role="Grupo_Asig" Type="Self.Grupo_Asig" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Documentos" Type="Self.Documentos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grupo_Asig">
+        <PropertyRef Name="ID_G_A_P_A" />
+      </Principal>
+      <Dependent Role="Documentos">
+        <PropertyRef Name="ID_G_A_P_A" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Horarios__ID_G_A__17F790F9">
+    <End Role="Grupo_Asig" Type="Self.Grupo_Asig" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Horarios" Type="Self.Horarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grupo_Asig">
+        <PropertyRef Name="ID_G_A_P_A" />
+      </Principal>
+      <Dependent Role="Horarios">
+        <PropertyRef Name="ID_G_A_P_A" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Grupo_Asig_Grupos">
+    <End Role="Grupos" Type="Self.Grupos" Multiplicity="0..1" />
+    <End Role="Grupo_Asig" Type="Self.Grupo_Asig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Grupos">
+        <PropertyRef Name="id_grupo" />
+      </Principal>
+      <Dependent Role="Grupo_Asig">
+        <PropertyRef Name="id_grupo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Grupo_Asig_Prof_Asig">
+    <End Role="Prof_Asig" Type="Self.Prof_Asig" Multiplicity="0..1" />
+    <End Role="Grupo_Asig" Type="Self.Grupo_Asig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Prof_Asig">
+        <PropertyRef Name="id_prof_asig" />
+      </Principal>
+      <Dependent Role="Grupo_Asig">
+        <PropertyRef Name="id_prof_asig" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Grupos_Semestre">
+    <End Role="Semestre" Type="Self.Semestre" Multiplicity="1" />
+    <End Role="Grupos" Type="Self.Grupos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Semestre">
+        <PropertyRef Name="id_semestre" />
+      </Principal>
+      <Dependent Role="Grupos">
+        <PropertyRef Name="id_semestre" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Grupos_Turnos">
+    <End Role="Turnos" Type="Self.Turnos" Multiplicity="1" />
+    <End Role="Grupos" Type="Self.Grupos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Turnos">
+        <PropertyRef Name="id_turno" />
+      </Principal>
+      <Dependent Role="Grupos">
+        <PropertyRef Name="id_turno" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Horarios_Horas">
+    <End Role="Horas" Type="Self.Horas" Multiplicity="0..1" />
+    <End Role="Horarios" Type="Self.Horarios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Horas">
+        <PropertyRef Name="id_hora" />
+      </Principal>
+      <Dependent Role="Horarios">
+        <PropertyRef Name="id_hora" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PC_Prof_Asig">
+    <End Role="Prof_Asig" Type="Self.Prof_Asig" Multiplicity="1" />
+    <End Role="PC" Type="Self.PC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Prof_Asig">
+        <PropertyRef Name="id_prof_asig" />
+      </Principal>
+      <Dependent Role="PC">
+        <PropertyRef Name="id_prof_asig" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PDC_Prof_Asig">
+    <End Role="Prof_Asig" Type="Self.Prof_Asig" Multiplicity="1" />
+    <End Role="PDC" Type="Self.PDC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Prof_Asig">
+        <PropertyRef Name="id_prof_asig" />
+      </Principal>
+      <Dependent Role="PDC">
+        <PropertyRef Name="id_prof_asig" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Prof_Asig_Profesor">
+    <End Role="Profesor" Type="Self.Profesor" Multiplicity="0..1" />
+    <End Role="Prof_Asig" Type="Self.Prof_Asig" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Profesor">
+        <PropertyRef Name="id_profesor" />
+      </Principal>
+      <Dependent Role="Prof_Asig">
+        <PropertyRef Name="id_profesor" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="HIGADDv1Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Asignaturas" EntityType="Self.Asignaturas" />
+    <EntitySet Name="Carreras" EntityType="Self.Carreras" />
+    <EntitySet Name="DCA" EntityType="Self.DCA" />
+    <EntitySet Name="Departamentos" EntityType="Self.Departamentos" />
+    <EntitySet Name="Dia" EntityType="Self.Dia" />
+    <EntitySet Name="Documentos" EntityType="Self.Documentos" />
+    <EntitySet Name="Facultad" EntityType="Self.Facultad" />
+    <EntitySet Name="Grupo_Asig" EntityType="Self.Grupo_Asig" />
+    <EntitySet Name="Grupos" EntityType="Self.Grupos" />
+    <EntitySet Name="Horarios" EntityType="Self.Horarios" />
+    <EntitySet Name="Horas" EntityType="Self.Horas" />
+    <EntitySet Name="Laboratorios" EntityType="Self.Laboratorios" />
+    <EntitySet Name="Literatura_Doc" EntityType="Self.Literatura_Doc" />
+    <EntitySet Name="PC" EntityType="Self.PC" />
+    <EntitySet Name="PDC" EntityType="Self.PDC" />
+    <EntitySet Name="Plan_asignatura" EntityType="Self.Plan_asignatura" />
+    <EntitySet Name="Plan_tematico" EntityType="Self.Plan_tematico" />
+    <EntitySet Name="Prof_Asig" EntityType="Self.Prof_Asig" />
+    <EntitySet Name="Profesor" EntityType="Self.Profesor" />
+    <EntitySet Name="Semestre" EntityType="Self.Semestre" />
+    <EntitySet Name="Turnos" EntityType="Self.Turnos" />
+    <AssociationSet Name="FK_Asignaturas_Carreras" Association="Self.FK_Asignaturas_Carreras">
+      <End Role="Carreras" EntitySet="Carreras" />
+      <End Role="Asignaturas" EntitySet="Asignaturas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Asignaturas_Plan_asignatura" Association="Self.FK_Asignaturas_Plan_asignatura">
+      <End Role="Plan_asignatura" EntitySet="Plan_asignatura" />
+      <End Role="Asignaturas" EntitySet="Asignaturas" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Literatura_Doc_Asignaturas" Association="Self.FK_Literatura_Doc_Asignaturas">
+      <End Role="Asignaturas" EntitySet="Asignaturas" />
+      <End Role="Literatura_Doc" EntitySet="Literatura_Doc" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Plan_tematico_Asignaturas" Association="Self.FK_Plan_tematico_Asignaturas">
+      <End Role="Asignaturas" EntitySet="Asignaturas" />
+      <End Role="Plan_tematico" EntitySet="Plan_tematico" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Prof_Asig_Asignaturas" Association="Self.FK_Prof_Asig_Asignaturas">
+      <End Role="Asignaturas" EntitySet="Asignaturas" />
+      <End Role="Prof_Asig" EntitySet="Prof_Asig" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Carreras_Facultad" Association="Self.FK_Carreras_Facultad">
+      <End Role="Facultad" EntitySet="Facultad" />
+      <End Role="Carreras" EntitySet="Carreras" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Grupos_Carreras" Association="Self.FK_Grupos_Carreras">
+      <End Role="Carreras" EntitySet="Carreras" />
+      <End Role="Grupos" EntitySet="Grupos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Laboratorios_Carreras" Association="Self.FK_Laboratorios_Carreras">
+      <End Role="Carreras" EntitySet="Carreras" />
+      <End Role="Laboratorios" EntitySet="Laboratorios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DCA_Departamentos" Association="Self.FK_DCA_Departamentos">
+      <End Role="Departamentos" EntitySet="Departamentos" />
+      <End Role="DCA" EntitySet="DCA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Departamentos_Facultad" Association="Self.FK_Departamentos_Facultad">
+      <End Role="Facultad" EntitySet="Facultad" />
+      <End Role="Departamentos" EntitySet="Departamentos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Profesor_Departamentos" Association="Self.FK_Profesor_Departamentos">
+      <End Role="Departamentos" EntitySet="Departamentos" />
+      <End Role="Profesor" EntitySet="Profesor" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Horarios_Dia" Association="Self.FK_Horarios_Dia">
+      <End Role="Dia" EntitySet="Dia" />
+      <End Role="Horarios" EntitySet="Horarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Documento__ID_G___1332DBDC" Association="Self.FK__Documento__ID_G___1332DBDC">
+      <End Role="Grupo_Asig" EntitySet="Grupo_Asig" />
+      <End Role="Documentos" EntitySet="Documentos" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Horarios__ID_G_A__17F790F9" Association="Self.FK__Horarios__ID_G_A__17F790F9">
+      <End Role="Grupo_Asig" EntitySet="Grupo_Asig" />
+      <End Role="Horarios" EntitySet="Horarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Grupo_Asig_Grupos" Association="Self.FK_Grupo_Asig_Grupos">
+      <End Role="Grupos" EntitySet="Grupos" />
+      <End Role="Grupo_Asig" EntitySet="Grupo_Asig" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Grupo_Asig_Prof_Asig" Association="Self.FK_Grupo_Asig_Prof_Asig">
+      <End Role="Prof_Asig" EntitySet="Prof_Asig" />
+      <End Role="Grupo_Asig" EntitySet="Grupo_Asig" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Grupos_Semestre" Association="Self.FK_Grupos_Semestre">
+      <End Role="Semestre" EntitySet="Semestre" />
+      <End Role="Grupos" EntitySet="Grupos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Grupos_Turnos" Association="Self.FK_Grupos_Turnos">
+      <End Role="Turnos" EntitySet="Turnos" />
+      <End Role="Grupos" EntitySet="Grupos" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Horarios_Horas" Association="Self.FK_Horarios_Horas">
+      <End Role="Horas" EntitySet="Horas" />
+      <End Role="Horarios" EntitySet="Horarios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PC_Prof_Asig" Association="Self.FK_PC_Prof_Asig">
+      <End Role="Prof_Asig" EntitySet="Prof_Asig" />
+      <End Role="PC" EntitySet="PC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PDC_Prof_Asig" Association="Self.FK_PDC_Prof_Asig">
+      <End Role="Prof_Asig" EntitySet="Prof_Asig" />
+      <End Role="PDC" EntitySet="PDC" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Prof_Asig_Profesor" Association="Self.FK_Prof_Asig_Profesor">
+      <End Role="Profesor" EntitySet="Profesor" />
+      <End Role="Prof_Asig" EntitySet="Prof_Asig" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(HIGADDv1Model.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(HIGADDv1Model.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_InserProfesor">
+      <Parameter Name="NumEmpleado" Mode="In" Type="String" />
+      <Parameter Name="NomProfesor" Mode="In" Type="String" />
+      <Parameter Name="ApeProfesor" Mode="In" Type="String" />
+      <Parameter Name="Telefono" Mode="In" Type="String" />
+      <Parameter Name="Cedula" Mode="In" Type="String" />
+      <Parameter Name="Correo" Mode="In" Type="String" />
+      <Parameter Name="Genero" Mode="In" Type="String" />
+      <Parameter Name="Fingreso" Mode="In" Type="DateTime" />
+      <Parameter Name="Nivel_Acad" Mode="In" Type="String" />
+      <Parameter Name="Tipo_Carga" Mode="In" Type="String" />
+      <Parameter Name="Id_Departameto" Mode="In" Type="String" />
+      <Parameter Name="Tipo_Contrato" Mode="In" Type="String" />
+      <Parameter Name="cargo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_InserSemestre">
+      <Parameter Name="Finicio" Mode="In" Type="DateTime" />
+      <Parameter Name="Ffin" Mode="In" Type="DateTime" />
+      <Parameter Name="Nombre" Mode="In" Type="String" />
+      <Parameter Name="Feriados" Mode="In" Type="String" />
+      <Parameter Name="Año" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="SP_VerCarreras" ReturnType="Collection(HIGADDv1Model.SP_VerCarreras_Result)" />
+    <FunctionImport Name="SP_VerCarreras1" EntitySet="Carreras" ReturnType="Collection(HIGADDv1Model.Carreras)" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="SP_VerCarreras_Result">
+    <Property Type="String" Name="id_carrera" Nullable="false" MaxLength="10" />
+    <Property Type="String" Name="nombre_carrera" Nullable="false" MaxLength="50" />
+    <Property Type="Int32" Name="C__semestres" Nullable="false" />
+    <Property Type="String" Name="id_Facultad" Nullable="true" MaxLength="10" />
+  </ComplexType>
+</Schema>

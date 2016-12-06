@@ -1,0 +1,275 @@
+﻿@{
+    ViewBag.Title = "3RP4";
+    Layout = "~/Views/Shared/_MasterPageLayout.cshtml";
+}
+
+<section id="sponsor">
+    <a name="ancla4"></a>
+    <a href="@Url.Action("ActivDocMain","ActividadDocente")#ancla3">
+        <img src="~/Content/img/Regrasar.png" style="height: 50px; margin-left: 0px; width: 50px;" />
+    </a>
+
+    <p></p>
+    <!------------DOCUMENTO OFICIAL----------->
+    <h2>REGISTRO DE PROGRESO</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+
+            <div class="col-md-9">
+
+                <div class="row" style="margin-bottom: 20px;">
+                    <div class="col-md-2" style="text-align: left;">
+                        <!---->
+                        <h4>Departamento:</h4>
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" class="form-control" pattern="[A-Z(0-9)]{4,48}">
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom: 20px;">
+                    <div class="col-md-3" style="text-align: left;">
+                        <!---->
+                        <h4>Jefe de Departamento:</h4>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="text" class="form-control" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}">
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom: 20px;">
+                    <p></p>
+                    <div class="col-md-10" style="padding-left: 10px; text-align: left;">
+                        <h4 style="margin-bottom: 0px;">Docentes del departamento:</h4><!---->
+                        <textarea class="form-control" name="message" rows="20" placeholder="NOMBRE--------------------------------------|ASIGNATURA"></textarea>
+                    </div>
+                </div>
+                <!--------------------------------------------------->
+                <div class="row" style="margin-bottom: 20px;">
+                    <div class="col-md-3" style="text-align: left;">
+                        <!---->
+                        <h4>Numero de empleado:</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" pattern="[0-9]{4}" required>
+                    </div>
+                    <div class="col-md-1" style="text-align: left;">
+                        <!---->
+                        <img src="~/Content/img/buscar.png" style="height: 25px; margin-top: 10px; width: 25px;" />
+                    </div>
+                </div>
+                <div class="row" style="margin-bottom: 20px;">
+                    <div class="col-md-3" style="text-align: left;">
+                        <!---->
+                        <h4>Nombre del docente:</h4>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="text" class="form-control" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{4,48}">
+                    </div>
+                </div>
+
+                <!----------------asignatura y grupos----------------->
+                <div class="row" style="margin-bottom: 20px;">
+                    <div class="col-md-2" style="text-align: left;">
+                        <h4>Asignatura:</h4>
+                    </div>
+                    <div class="col-md-5" style="text-align: left;">
+                        <input type="text" class="form-control" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{4,48}">
+                    </div>
+                    <div class="col-md-1" style="text-align: left;">
+                        <h4>grupos:</h4>
+                    </div>
+                    <div class="col-md-2" style="text-align: left;">
+                        <textarea class="form-control" name="message" rows="5"></textarea><!----------no se puede validar!, contenido sale del sistema------------>
+                    </div>
+                </div>
+
+                <!--------------PLAN ASIGNATURA--------------->
+                <div class="row" style="margin-bottom: 20px;">
+                    <!----------------------------------------------------------hay que hacer mas pequeñas las casillas de si ó no--------------------------------------------->
+                    <div class="col-md-3" style="text-align: left;">
+                        <h4>Plan asignatura</h4>
+                    </div>
+                    <div class="col-md-1">
+                        <input type="text" class="form-control" placeholder="Si/No required con el chek" value="no" pattern="(si)" required style="height: 45px; width: 45px;"><!--tiene que recivir y presentar tres pocibls valores, si, no o incompleto-->
+                        <i class="fa fa-check check-ok"></i><!-------aqui el chek ???-------->
+                    </div>
+                </div>
+
+                <!-------PLAN CALENDARIO DE LA ASIGNATURA------->
+                <div class="row" style="margin-bottom: 20px;">
+                    <!--hay que hacer una tabla nueva para poder agregar y manejar las notificaciones de cada dosente con respecto a las asignaturas que inpate??-->
+                    <div class="col-md-4" style="text-align: left;">
+                        <h4>Plan calendario de la asignatura:</h4>
+                    </div>
+                    <div class="col-md-1">
+                        <input type="text" class="form-control" placeholder="Si/No required con el chek" value="no" pattern="(si)" required style="height: 45px; width: 45px;"><!--tiene que recivir y presentar tres pocibls valores, si, no o incompleto-->
+                        <i class="fa fa-check check-ok"></i><!-------aqui el chek ???-------->
+                    </div>
+                    <div class="col-md-4" style="text-align: left;">
+                        <a href="#" class="btn btn-primary btn-lg" role="button">SOLICITAR</a>
+                    </div>
+                </div>
+
+                <!-------------------------------------PLAN OPERATIVO INDIVIDUAL--------------------------------------->
+                <div class="row" style="margin-bottom: 20px;">
+                    <!--hay que hacer una tabla nueva para poder agregar y manejar las notificaciones de cada dosente con respecto a las asignaturas que inpate??-->
+                    <div class="col-md-4" style="text-align: left;">
+                        <h4>Informe POI:</h4>
+                    </div>
+                    <div class="col-md-1">
+                        <input type="text" class="form-control" placeholder="Si/No required con el chek" value="no" pattern="(si)" required style="height: 45px; width: 45px;"><!--tiene que recivir y presentar tres pocibls valores, si, no o incompleto-->
+                        <i  class="fa fa-check check-ok"></i><!-------aqui el chek ???-------->
+                    </div>
+                    <div class="col-md-4" style="text-align: left;">
+                        <a href="#" class="btn btn-primary btn-lg" role="button">SOLICITAR</a>
+                    </div>
+                </div>
+
+                <!-----------------------INFORNME CUALITATIVO, CUANTITATIVO Y DE CONSULTAS.---------------------------->
+                <div class="row" style="margin-bottom: 20px;">
+                    <!--hay que hacer una tabla nueva para poder agregar y manejar las notificaciones de cada dosente con respecto a las asignaturas que inpate??-->
+                    <div class="col-md-4" style="text-align: left;">
+                        <h4>Informe CCC:</h4>
+                    </div>
+                    <div class="col-md-1">
+                        <input type="text" class="form-control" placeholder="Si/No required con el chek" value="no" pattern="(si)" required style="height: 45px; width: 45px;"><!--tiene que recivir y presentar tres pocibls valores, si, no o incompleto-->
+                        <i class="fa fa-check check-ok"></i><!-------aqui el chek ???-------->
+                    </div>
+                    <div class="col-md-4" style="text-align: left;">
+                        <a href="#" class="btn btn-primary btn-lg" role="button">SOLICITAR</a>
+                    </div>
+                </div>
+                <!--------------------INFORME ACADÉMICO POR GRUPO DE CLASES ASISTIDO EN SEMESTRE----------------------->
+                <div class="row" style="margin-bottom: 20px;">
+                    <!--hay que hacer una tabla nueva para poder agregar y manejar las notificaciones de cada dosente con respecto a las asignaturas que inpate??-->
+                    <div class="col-md-4" style="text-align: left;">
+                        <h4>Informe AGCAS:</h4>
+                    </div>
+                    <div class="col-md-1">
+                        <input type="text" class="form-control" placeholder="Si/No required con el chek" value="no" pattern="(si)" required style="height: 45px; width: 45px;">
+                        <i class=" fa fa-check check-ok"></i><!-------aqui el chek ???-------->
+                    </div>
+                    <div class="col-md-4" style="text-align: left;">
+                        <a href="#" class="btn btn-primary btn-lg" role="button">SOLICITAR</a>
+                    </div>
+                </div>
+
+                <!---primer barra--->
+                <div class="row" style="margin-bottom: 20px;">
+                    <!--hay que hacer una tabla nueva para poder agregar y manejar las notificaciones de cada dosente con respecto a las asignaturas que inpate-->
+                    <div class="col-md-4" style="text-align: left;">
+                        <h4>Reuniones metodologicas:</h4>
+                    </div>
+                    <div class="col-md-4" style="text-align: left;">
+                        <progress max="100" value="60"></progress>
+                    </div>
+                    <div class="col-md-4" style="text-align: left;">
+                        <a href="#" class="btn btn-primary btn-lg" role="button">SOLICITAR</a>
+                    </div>
+                </div>
+
+                <!---segunda barra--->
+                <div class="row" style="margin-bottom: 20px;">
+                    <!--hay que hacer una tabla nueva para poder agregar y manejar las notificaciones de cada dosente con respecto a las asignaturas que inpate-->
+                    <div class="col-md-4" style="text-align: left;">
+                        <h4>Informes de consultas:</h4>
+                    </div>
+                    <div class="col-md-4" style="text-align: left;">
+                        <progress max="100" value="10"></progress>
+                    </div>
+                    <div class="col-md-4" style="text-align: left;">
+                        <a href="#" class="btn btn-primary btn-lg" role="button">SOLICITAR</a>
+                    </div>
+                </div>
+
+                <!---tercera barra--->
+                <div class="row" style="margin-bottom: 20px;">
+                    <!--hay que hacer una tabla nueva para poder agregar y manejar las notificaciones de cada dosente con respecto a las asignaturas que inpate-->
+                    <div class="col-md-4" style="text-align: left;">
+                        <h4>Plan diario de clases:</h4>
+                    </div>
+                    <div class="col-md-4" style="text-align: left;">
+                        <progress max="100" value="100"></progress>
+                    </div>
+                    <div class="col-md-4" style="text-align: left;">
+                        <a href="#" class="btn btn-primary btn-lg" role="button">SOLICITAR</a>
+                    </div>
+                </div>
+
+                <!---cuarta barra--->
+                <div class="row" style="margin-bottom: 20px;">
+                    <!--hay que hacer una tabla nueva para poder agregar y manejar las notificaciones de cada dosente con respecto a las asignaturas que inpate-->
+                    <div class="col-md-4" style="text-align: left;">
+                        <h4>Informes de laboratorios:</h4>
+                    </div>
+                    <div class="col-md-4" style="text-align: left;">
+                        <progress max="100" value="10"></progress>
+                    </div>
+                    <div class="col-md-4" style="text-align: left;">
+                        <a href="#" class="btn btn-primary btn-lg" role="button">SOLICITAR</a>
+                    </div>
+                </div>
+
+                <!---------------------mensajes de documentos pendientes----------------------->
+                <div class="row" style="margin-bottom: 20px;">
+                    <p></p>
+                    <div class="col-md-10" style="padding-left: 10px; text-align: left;">
+                        <h2 style="margin-bottom: 0px;">Mensajes del jefe de departamento:</h2><!---->
+                        <br />
+                        <textarea class="form-control" name="message" rows="10" placeholder="AQUE HORAS LOS DOCUMENTOS PAJERO!!!!!!!!! :V" style="background:white; color:black;"></textarea>
+                    </div>
+                </div>
+                <!---------------resolver mensajes, esto te tiene que llevar al documento que tenes que subir--------------->
+                <div class="row" style="margin-bottom: 20px;">
+                    <div class="col-md-4" style="text-align: left;">
+                        <h4>Documento pendiente de:</h4>
+                    </div>
+                    <div class="col-md-3" style="text-align: left;">
+                        <h4>
+                            <select name="TipoContrato">
+                                <option value="">PCA</option>
+                                <option value="">PA</option>
+                                <option value="">POI</option>
+                                <option value="">CCC</option>
+                                <option value="">AGCAS</option>
+                                <option value="">RM</option>
+                                <option value="">IC</option>
+                                <option value="">PDC</option>
+                                <option value="">IL</option>
+                            </select>
+                        </h4>
+                    </div>
+                    <div class="col-md-4" style="text-align: left;">
+                        <a href="#" class="btn btn-primary btn-lg" role="button">IR A FORMULARIO</a>
+                    </div>
+                </div>
+                <!---comentarios--->
+                <br />
+                <div class="row" style="margin-bottom: 20px; text-align: justify;">
+                    <div class="col-md-10">
+                        <b style="color: black;">Informe PCA: Plan Calendario de la Asignatura</b>
+                        <p></p>
+                        <b style="color: black;">Informe PA: Plan Asignatura</b>
+                        <p></p>
+                        <b style="color: black;">Informe POI: Plan Operativo Individual</b>
+                        <p></p>
+                        <b style="color: black;">Informe CCC: Informe Cualitativo, Cuantitativo y de Consultas</b>
+                        <p></p>
+                        <b style="color: black;">Informe AGCAS: Informe Académico por Grupos de Clases Asistido en Semestre</b>
+                        <p></p>
+                        <b style="color: black;">Informe RM: Informe de Reuniones Metodologicas</b>
+                        <p></p>
+                        <b style="color: black;">Informe IN: Informe de Consultas</b>
+                        <p></p>
+                        <b style="color: black;">Informe PDC: Plan Diario de Clases</b>
+                        <p></p>
+                        <b style="color: black;">Informe IL: Informe de Laboratorio</b>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>

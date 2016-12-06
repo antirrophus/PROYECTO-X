@@ -1,0 +1,188 @@
+﻿@{
+    ViewBag.Title = "2PlAc4";
+    Layout = "~/Views/Shared/_MasterPageLayout.cshtml";
+}
+
+<section id="sponsor">
+    <a name="ancla4"></a>
+    <a href="@Url.Action("PlanifAcadMain", "PlanificacionAcad")#ancla3">
+        <img src="~/Content/img/Regrasar.png" style="height: 50px; margin-left: 0px; width: 50px;" />
+    </a>
+
+    <p></p>
+    <h2>Plan Diario de Clases</h2>
+    <div class="container">
+        <form>
+            <div class="row">
+                <div class="col-md-2"></div>
+
+                <div class="col-md-9">
+                    <!--seleccion de la asignatura-->
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <h3 style="padding-left: 10px; text-align: left;">SELECCIONE ASIGNATURA</h3>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-7">
+                            <p style="text-align: justify; color: black;">
+                                se muestran las asignaturas que imparte, seleccione la que desee introducir.
+                            </p>
+                            <textarea class="form-control" placeholder="AQUI VAN LAS ASIGNATURAS QUE TIENE ASIGNADAS CON EL GRUPO CADA PROFESOR EN LA BASE DE BATOS" name="message" rows="5"></textarea>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-3">
+                            <p style="text-align: justify; color: black;">
+                                Introdusca la semana que desea agregar.
+                            </p>
+                            <input type="text" class="form-control" placeholder="Semana #:">
+                        </div>
+                    </div>
+                    <!--1 dotos generales-->
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <ol type="I" start="1">
+                                <li style="color: #27119a; font-size: 30px;">
+                                    <h3 style="padding-left: 10px; text-align: left;">DATOS GENERALES</h3>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" placeholder="Facultad:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{4,48}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" placeholder="Carrera:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{4,48}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" placeholder="Departamento:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{4,48}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" placeholder="Asignatura:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{4,48}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" placeholder="Profesor:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{4,48}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 70px;">
+                        <p></p>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" placeholder="Grupos:" pattern="[A-Z- (1-5)]{6,48}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <input type="time" class="form-control" placeholder="Hora:" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-2">
+                            <input type="text" class="form-control" placeholder="Duración:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð: ,.'-:(0-9)]{4,48}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" placeholder="Unidad tematica:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð: ,.'-:(0-9)]{4,48}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <p></p>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" placeholder="Tipo de FOE:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð: ,.'-:(0-9)]{4,48}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <!--2 compoonentes didacticos-->
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <ol type="I" start="2">
+                                <li style="color: #27119a; font-size: 30px;">
+                                    <h3 style="padding-left: 10px; text-align: left;">COMPONENTES DIDACTICOS</h3>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10" style="text-align: left;">
+                            <h4 style="margin-bottom: 0px;">Objetivos:</h4>
+                            <textarea class="form-control" name="ObjetivosPDC" rows="12" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10" style="text-align: left;">
+                            <h4 style="margin-bottom: 0px;">Contenido a Desarrollar:</h4>
+                            <textarea class="form-control" name="contenidoPDC" rows="5" required></textarea>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10" style="text-align: left;">
+                            <h4 style="margin-bottom: 0px;">Actividades de Aprendizaje:</h4>
+                            <textarea class="form-control" name="actividadesPDC" rows="12" required></textarea>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10" style="text-align: left;">
+                            <h4 style="margin-bottom: 0px;">Medios/Recursos Didacticos:</h4>
+                            <textarea class="form-control" name="recursosPDC" rows="5" required></textarea>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10" style="text-align: left;">
+                            <h4 style="margin-bottom: 0px;">Formas de Evaluación de los Aprendizajes:</h4>
+                            <textarea class="form-control" name="evaluacionPDC" rows="12" required></textarea>
+                        </div>
+                    </div>
+                    <!--3 Orientaciones para el estudio independiente-->
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <ol type="I" start="3">
+                                <li style="color: #27119a; font-size: 30px;">
+                                    <h3 style="padding-left: 10px; text-align: left;">Orientaciones para el Estudio Independiente</h3>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10" style="text-align: left;">
+                            <textarea class="form-control" name="oeindependientePDC" rows="12" required></textarea>
+                        </div>
+                    </div>
+                    <!--4 bibliografia-->
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <ol type="I" start="4">
+                                <li style="color: #27119a; font-size: 30px;">
+                                    <h3 style="padding-left: 10px; text-align: left;">Bibliografia de Consulta</h3>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10" style="text-align: left;">
+                            <textarea class="form-control" name="bibliografiaPDC" rows="12" required></textarea>
+                        </div>
+                    </div>
+                    <!-- fin -->
+                </div>
+            </div>
+            <img src="~/Content/img/guardar.png" style="height: 50px; margin-top: 10px; width: 50px;" />
+        </form>
+       
+    </div>
+</section>

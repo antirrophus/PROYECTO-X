@@ -1,0 +1,225 @@
+﻿@{
+    ViewBag.Title = "2PlAc2";
+    Layout = "~/Views/Shared/_MasterPageLayout.cshtml";
+}
+
+<section id="sponsor">
+    <a name="ancla4"></a>
+    <a href="@Url.Action("PlanifAcadMain", "PlanificacionAcad")#ancla3">
+        <img src="~/Content/img/Regrasar.png" style="height: 50px; margin-left: 0px; width: 50px;" />
+    </a>
+
+    <p></p>
+    <h2>Plan Calendario</h2>
+    <div class="container2">
+        <form>
+            <div class="row">
+                <div class="col-md-2"></div>
+
+                <div class="col-md-9">
+                    <!--seleccion de la asignatura--><!---AQUI TIENE QUE IR UNA BUSQUEDA, FALTA UN BOTOS E IMEDIATAMENTE SE TIENE QUE RELLENAR LA PARTE INFERIOR--->
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <h3 style="padding-left: 10px; text-align: left;">SELECCIONE ASIGNATURA</h3>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-7">
+                            <p style="text-align: justify; color: black;">
+                                se muestran las asignaturas que imparte, seleccione la que desee introducir.
+                            </p>
+                            <textarea class="form-control" name="message" rows="5"></textarea>
+                        </div>
+                    </div>
+
+                    <!--1 dotos generales--><!--TODOS ESTOS DATOS DEBEN DE AUTOLLENARSE va igual la validadción??--->
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <h3 style="padding-left: 10px; text-align: left;">DATOS GENERALES</h3>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" placeholder="Facultad:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{4,48}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" placeholder="Carrera:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{4,48}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" placeholder="Departamento:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{4,48}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" placeholder="Asignatura:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{4,48}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" placeholder="Profesor:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{4,48}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <p></p>
+                        <div class="col-md-3">
+                            <input type="text" class="form-control" placeholder="Semestre Academico:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-(0-9)]{4,48}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" placeholder="Grupos:" pattern="[A-Z- (1-5)]{6,48}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <!--------------------------NO TIENE NADA--------------------------->
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" placeholder="FALTA, NO SE QUE VA AQUÍ:">
+                        </div>
+                    </div>
+                    <!--recuadritos-->
+                    <div class="row" style="margin-bottom: 0px;">
+                        <div class="col-md-10">
+                            <p style="text-align: center; color: black;">
+                                Total de Horas Semestrel Semestre.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;"><!-------------------------------PREGUNTAR QUE ES CADA CUADRITO Y CUANTAS HORAS MINIMO SE PUEDEN METER EN CADA UNO------------------------>
+                        <div class="col-md-1">
+                            <p style="text-align: center; color: black; height: 40px; width: 50px;">
+                                C.
+                                <input type="text" class="form-control" pattern="[0-9]{1,2}" required><!--C-->
+                            </p>
+                        </div>
+                        <div class="col-md-1">
+                            <p style="text-align: center; color: black; height: 40px; width: 50px;">
+                                CP.
+                                <input type="text" class="form-control" pattern="[0-9]{1,2}" required><!--CP-->
+                            </p>
+                        </div>
+                        <div class="col-md-1">
+                            <p style="text-align: center; color: black; height: 40px; width: 50px;">
+                                S.
+                                <input type="text" class="form-control" pattern="[0-9]{1,2}" required><!--S-->
+                            </p>
+                        </div>
+                        <div class="col-md-1">
+                            <p style="text-align: center; color: black; height: 40px; width: 50px;">
+                                TC.
+                                <input type="text" class="form-control" pattern="[0-9]{1,2}" required><!--TC-->
+                            </p>
+                        </div>
+                        <div class="col-md-1">
+                            <p style="text-align: center; color: black; height: 40px; width: 50px;">
+                                PC.
+                                <input type="text" class="form-control" pattern="[0-9]{1,2}" required><!--PC-->
+                            </p>
+                        </div>
+                        <div class="col-md-1">
+                            <p style="text-align: center; color: black; height: 40px; width: 50px;">
+                                LB.
+                                <input type="text" class="form-control" pattern="[0-9]{1,2}" required><!--LB-->
+                            </p>
+                        </div>
+                        <div class="col-md-1">
+                            <p style="text-align: center; color: black; height: 40px; width: 50px;">
+                                T.
+                                <input type="text" class="form-control" pattern="[0-9]{1,2}" required><!--T-->
+                            </p>
+                        </div>
+                        <div class="col-md-1">
+                            <p style="text-align: center; color: black; height: 40px; width: 50px;">
+                                GC.
+                                <input type="text" class="form-control" pattern="[0-9]{1,2}" required><!--GC-->
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <p></p>
+                        <div class="col-md-3">
+                            <input type="text" class="form-control" placeholder="Horarios de Consultas:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð: ,.'-(0-9)]{4,48}" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" placeholder="Creditos:" pattern="[1-6]{1}" required><!---no estoy seguro :/--->
+                        </div>
+                    </div>
+
+                    <!--2 Objetivos generales de la asignatura-->
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <ol type="I" start="2">
+                                <li style="color: #27119a; font-size: 30px;">
+                                    <h3 style="padding-left: 10px; text-align: left;">Objetivos Generales de la Asignatura</h3>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10" style="text-align: left;">
+                            <textarea class="form-control" name="objetivosPC" rows="12" required></textarea>
+                        </div>
+                    </div>
+
+                    <!--3 Objetivos Especificos o por unidad de la asignatura-->
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <ol type="I" start="3">
+                                <li style="color: #27119a; font-size: 30px;">
+                                    <h3 style="padding-left: 10px; text-align: left;">Objetivos Especificos por unidad de la asignatura</h3>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10" style="text-align: left;">
+                            <textarea class="form-control" name="objetivosEUPC" rows="50" required></textarea>
+                        </div>
+                    </div>
+
+                    <!--4 aqui falta una secion que comtiene:
+            SEMANA | SESION Y FECHA | NUMERO Y NUMERO DE LA UNDAD | CONTENIDOS O TEMAS DE LA UNIDAD | FORMA DE ORGANIZACION DE LA ENSEÑANZAS | MEDIOS/RECURSOS DIDACTICOS | EVALUACION DE LOS APRENDIZAJES-->
+                    <!---_________________________________________ESTAMOS FRITOSSS!!!!!!!!!!!!!!!!!!!____________________________________________-->>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <ol type="I" start="4">
+                                <li style="color: #27119a; font-size: 30px;">
+                                    <h3 style="padding-left: 10px; text-align: left;">SEMANA | SESION Y FECHA | NUMERO Y NUMERO DE LA UNDAD | CONTENIDOS O TEMAS DE LA UNIDAD | FORMA DE ORGANIZACION DE LA ENSEÑANZAS | MEDIOS/RECURSOS DIDACTICOS | EVALUACION DE LOS APRENDIZAJES</h3>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <!--5 bibliografia-->
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <ol type="I" start="5">
+                                <li style="color: #27119a; font-size: 30px;">
+                                    <h3 style="padding-left: 10px; text-align: left;">Bibliografia de Consulta para el Curso</h3>
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10" style="text-align: left;">
+                            <textarea class="form-control" name="bibliografiaPC" rows="12" required></textarea>
+                        </div>
+                    </div>
+
+                    <!-- fin -->
+                </div>
+            </div>
+            <input name="botonGSem" type="image" src="~/Content/img/guardar.png" style="height: 50px; margin-top: 10px; width: 50px;">
+        </form>
+    </div>
+    <h2 style="color: black;">NO DISPONIBLE PARA MOVILES</h2>
+    <h2 style="color: black;">resolucion insuficiente</h2>
+</section>

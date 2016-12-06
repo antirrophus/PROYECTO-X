@@ -1,0 +1,56 @@
+﻿@model ProyectoEtapa2.Data.Semestre
+
+@{
+    ViewBag.Title = "1AdCreacionSemestre";
+    Layout = "~/Views/Shared/_MasterPageLayout.cshtml";
+}
+
+<a name="ancla4"></a>
+@using (Html.BeginForm("GuardarSem", "Administracion", FormMethod.Post))
+                    {
+    <section id="sponsor">
+        <a href="@Url.Action("Administrar","Administracion")#ancla3">
+            <img src="~/Content/img/Regrasar.png" style="height: 50px; margin-left: 0px; width: 50px;" />
+        </a>
+        <h2>CREACIÓN DE SEMESTRE</h2>
+
+        <div class="container">
+            <form>
+                <div class="row">
+                    <div class="col-md-3"></div>
+
+                    <div class="col-md-6">
+
+                        <input type="text" name="NombreSemestre" class="form-control" placeholder="Semestre:" value="" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-(0-9)]{4,48}" required>
+                        <i class="fa fa-check check-ok"></i>
+                        <br>
+
+                        <input type="text" name="AnioAcad" class="form-control" placeholder="Año Academico:" value="" pattern="^([0-9]{4})$" required>
+                        <i class="fa fa-check check-ok"></i>
+                        <br>  
+
+                        <div class="col-md-4" style="padding-left: 0px;">
+
+                            <h4 style="margin-bottom: 0px;">Fecha Inicio:</h4>
+                            <input type="date" name="FechaIni" class="form-control"  value="" required>
+                            <i class="fa fa-check check-ok"></i>
+                            <!--formato de la fecha --DD/MM/AAAA-->
+                            
+                            <h4 style="margin-bottom: 0px;">Fecha Final:</h4>
+                            <input type="date" name="FechaFin" class="form-control" value="" required>
+                            <i class="fa fa-check check-ok"></i>
+                            <!--formato de la fecha --DD/MM/AAAA-->
+                            <br>
+
+                            <h4 style="margin-bottom: 0px;">Dias Feriados</h4>
+                            <textarea class="form-control" name="DiasFeriados" rows="5" inputmode="2" required></textarea>
+
+                        </div>
+                    </div>
+                </div>
+                <input name="botonGSem" type="image" src="~/Content/img/guardar.png" style="height: 50px; margin-top: 10px; width: 50px;">
+            </form>
+        </div>
+
+    </section>
+}

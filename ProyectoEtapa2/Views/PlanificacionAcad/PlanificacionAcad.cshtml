@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "PlanificacionAcad";
+    Layout = "~/Views/Shared/_MasterPageLayout.cshtml";
+}
+<a name="ancla1"></a>
+<a name="ancla3"></a>
+    <section id="about" class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <span>
+                    <a href="@Url.Action("CreaCargAcademi", "PlanificacionAcad")#ancla4">
+                        <img src="~/Content/img/PlaAca/creacion CA.png" />
+                    </a>
+                </span>
+                <br>
+                <h3>Creación de la Carga Academica.</h3>
+                Creación de la Carga Academica a utilisar en los distintos departamentos que componen la carrera.
+                <p></p>
+            </div>
+
+            <div class="col-md-3">
+                <span>
+                    <a href="@Url.Action("CreaPlanAcalen", "PlanificacionAcad")#ancla4">
+                        <img src="~/Content/img/PlaAca/Plan calendario.png" />
+                    </a>
+                </span>
+                <br>
+                <h3>Plan Calendario.</h3>
+                Creación, organización y actualización de planes calendarios de sus respectivas asignaturas a impartir durante el semestre.
+                <p></p>
+            </div>
+
+            <div class="col-md-3">
+                <span>
+                    <a href="@Url.Action("PlaniHoraria", "PlanificacionAcad")#ancla4">
+                        <img src="~/Content/img/PlaAca/Planificacion horaria.png" />
+                    </a>
+                </span>
+                <br>
+                <h3>Planificación Horaria.</h3>
+                Estrcturación de los horarios de clases de los grupos.
+                <p></p>
+            </div>
+
+            <div class="col-md-3">
+                <span>
+                    <a href="@Url.Action("PDC", "PlanificacionAcad")#ancla4">
+                        <img src="~/Content/img/PlaAca/Plan diario de clases.png" />
+                    </a>
+                </span>
+                <br>
+                <h3>Plan Diario de Clases.</h3>
+                Estructuracion de los reportes correspondientes a las asignaturas a impartir.
+                <p></p>
+            </div>
+        </div>
+    </section>

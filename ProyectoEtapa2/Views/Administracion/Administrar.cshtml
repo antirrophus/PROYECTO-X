@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "Administrar";
+    Layout = "~/Views/Shared/_MasterPageLayout.cshtml";
+}
+<a name="ancla1"></a>
+<a name="ancla3"></a>
+    <section id="about" class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <span>
+                    <a href="@Url.Action("AdCreacionSemestre", "Administracion")#ancla4">
+                        <img src="~/Content/img/Adm/semestres.png" />
+                    </a>
+                </span>
+                <br>
+                <h3>Creación de semestre.</h3>
+                Primera etapa para usar el sistema, cree los semestres academicos.
+                <p></p>
+            </div>
+
+            <div class="col-md-3">
+                <span>
+                    <a href="@Url.Action("AdProfesor","Administracion")#ancla4">
+                        <img src="~/Content/img/Adm/Profesores.png" />
+                    </a>
+                </span>
+                <br>
+                <h3>Administrar Profesor.</h3>
+                Introducir, Actualizar o Eliminar docentes del sistema.
+                <p></p>
+            </div>
+
+            <div class="col-md-3">
+                <span>
+                    <a href="@Url.Action("AdCreaGrupo", "Administracion")#ancla4">
+                        <img src="~/Content/img/Adm/grupos.png" />
+                    </a>
+                </span>
+                <br>
+                <h3>Creación de Grupos</h3>
+                Estructuracion de los grupos de clases.
+                <p></p>
+            </div>
+
+            <div class="col-md-3">
+                <span>
+                    <a href="@Url.Action("AdPlanAsignatura", "Administracion")#ancla4">
+                        <img src="~/Content/img/Adm/plan asignatura.png" />
+                    </a>
+                </span>
+                <br>
+                <h3>Ingresar Plan Asignatura.</h3>
+                Creacion de un nuevo Plan Asignatura para las carreras.
+                <p></p>
+            </div>
+
+            <div class="col-md-3">
+                <span>
+                    <a href="@Url.Action("AdProAnalitAsig", "Administracion")#ancla4">
+                        <img src="~/Content/img/Adm/programa analitico.png" />
+                    </a>
+                </span>
+                <br>
+                <h3>Programa Analitico de la Asignatura</h3>
+                Estructuracion de las asignaturas y su contenido.
+                <p></p>
+            </div>
+        </div>
+    </section>

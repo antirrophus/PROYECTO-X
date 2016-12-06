@@ -1,0 +1,280 @@
+﻿@{
+    ViewBag.Title = "3NFPlan2";
+    Layout = "~/Views/Shared/_MasterPageLayout.cshtml";
+}
+
+<section id="sponsor">
+    <a name="ancla4"></a>
+    <a href="@Url.Action("ActivDocMain","ActividadDocente")#ancla3">
+        <img src="~/Content/img/Regrasar.png" style="height: 50px; margin-left: 0px; width: 50px;" />
+    </a>
+
+    <p></p>
+    <!------------DOCUMENTO OFICIAL----------->
+    <h2>INFORME CUALITATIVO, CUANTITATIVO Y DE CONSULTAS</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+
+            <div class="col-md-12">
+                <form>
+                    <!--1) Presentacion de nombre del docente y fecha de entrega -->
+                    <!----DATOS---->
+                    <!--nombre del docente--><!--año lectivo-->
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-3">
+                            <h4>Nombre del Docente:</h4>
+                        </div>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" placeholder="AQUI APARECERA EL NOMBRE:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}">
+                        </div>
+                        <div class="col-md-2">
+                            <h4>Año lectivo:</h4>
+                        </div>
+                        <div class="col-md-2">
+                            <input type="text" class="form-control" placeholder="AÑO:XXXX" pattern="[2][0][0-9]{2}">
+                        </div>
+                    </div>
+                    <!--semestre--><!--Fecha de entrega"puede ser la fecha de elaboracion"--><!--Numero de paguinas-->
+                    <div class="row" style="margin-bottom: 20px;">
+
+                        <div class="col-md-2">
+                            <h4>Semestre:</h4>
+                        </div>
+                        <div class="col-md-2">
+                            <input type="text" class="form-control" placeholder="AQUI APARECERA EL SEMESTRE EN CURSO" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-(0-9)]{4,48}">
+                        </div>
+                        <div class="col-md-2">
+                            <h4>Fecha de entrega:</h4>
+                        </div>
+                        <div class="col-md-2">
+                            <input type="date" name="FechaEnt" class="form-control" required>
+                        </div>
+                        <div class="col-md-1">
+                            <h4>paguina:</h4>
+                        </div>
+                        <div class="col-md-1">
+                            <input type="text" class="form-control" pattern="[1-9]{1}" style="border: 2px solid green; height: 40px; width: 55px;">
+                        </div>
+                        <div class="col-md-1">
+                            <h4>de:</h4>
+                        </div>
+                        <div class="col-md-1">
+                            <input type="text" class="form-control" pattern="[1-9]{1}" style="border: 2px solid green; height: 40px; width: 55px;">
+                        </div>
+                    </div>
+                    <!------------Asignatura----grupo---------------->
+                    <div class="row" style="margin-bottom: 20px;">
+
+                        <div class="col-md-2">
+                            <h4>Asignatura:</h4>
+                        </div>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" placeholder="AQUI VA LA ASIGNATURA" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}">
+                        </div>
+                        <div class="col-md-1">
+                            <h4>Grupo:</h4>
+                        </div>
+                        <div class="col-md-2">
+                            <input type="text" class="form-control" placeholder="XXXX" pattern="([1-5][M|T|N][1-5]-[CO|TQ|EL]{2})">
+                        </div>
+                    </div>
+
+                    <!--1) INFORME CUANTITATIVO (TOTAL Y PORCENTAJE DE APROBADOS Y REPROBADOS POR GRUPO)-->
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-9">
+                            <h4 style="color: black;">INFORME CUANTITATIVO (TOTAL Y PORCENTAJE DE APROBADOS Y REPROBADOS POR GRUPO)</h4><!--esto en negrilla-->
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                    </div>
+                    <!--Rellenar datos-->
+                    <!---Grupo---Matricula inicial(# y %)---Matricula efectiva(# y %)---Aprobados(# y %)---Reprobados(# y %)---Deserciones (# y %)---Rendimientos academico (%)--->
+                    <!---Nota Promedio:---Nota Maxima:----->
+                    <!--primera linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-2" style="text-align: left;">
+                            <h4>Matricula inicial.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="10" max="50" class="form-control" placeholder="#" required style=" height: 40px; width: 65px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="10" max="100" class="form-control" placeholder="%" style="border-color:black; height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <!---->
+                        <div class="col-md-2" style="text-align: left;">
+                            <h4>Matricula efectiva.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="1" max="50" class="form-control" placeholder="#" required style=" height: 40px; width: 65px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="1" max="100" class="form-control" placeholder="%" style="border-color:black; height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--segunda linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-2" style="text-align: left;">
+                            <h4>Aprobados.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="50" class="form-control" placeholder="#" required style=" height: 40px; width: 65px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="100" class="form-control" placeholder="%" style="border-color:black; height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <!---->
+                        <div class="col-md-2" style="text-align: left;">
+                            <h4>Reprobados.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="50" class="form-control" placeholder="#cal" style="border-color:black; height: 40px; width: 65px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="100" class="form-control" placeholder="%" style="border-color:black; height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--tercera linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-2" style="text-align: left;">
+                            <h4>Deserciones.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="50" class="form-control" placeholder="#cal" style="border-color:black; height: 40px; width: 65px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="100" class="form-control" placeholder="%" style="border-color:black; height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <!---->
+                        <div class="col-md-2" style="text-align: left;">
+                            <h4>Rendimiento academico.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="100" class="form-control" placeholder="%cal" style="border-color:black; height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--quinta linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-1"></div>
+                        <p></p>
+                        <div class="col-md-2" style="color:black; text-align: left;">
+                            <h4>NOTA MAXIMA.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="60" max="100" class="form-control" required style=" border-color:black; height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-5" style="color:black; text-align: left;">
+                            <h4>PROMEDIO DE NOTA DE ASIGNATURA.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="100" class="form-control" required style=" border-color:black; height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                    </div>
+
+                    <!--2)INFROME CUALITATIVO(FINALIZACION DEL PLAN PROGRAMATICO ASI COMO INCONVENIENTES CON LOS GRUPOPS EN EL SEMESTRE).-->
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-9">
+                            <h4 style="color: black;">INFROME CUALITATIVO(FINALIZACION DEL PLAN PROGRAMATICO ASI COMO INCONVENIENTES CON LOS GRUPOPS EN EL SEMESTRE).</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                    </div>
+                    <textarea class="form-control" name="message" rows="12" required></textarea>
+                    <br />
+
+                    <!--3)INFORME DE CUMPLIMIENTO DE CONSULTAS-->
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-9">
+                            <h4 style="color: black;">INFORME DE CUMPLIMIENTO DE CONSULTAS.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                    </div>
+                    <textarea class="form-control" name="message" rows="12" required></textarea>
+                    <br />
+
+                    <!--4)OBSERVACIONES-->
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-9">
+                            <h4 style="color: black;">OBSERVACIONES.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                    </div>
+                    <textarea class="form-control" name="message" rows="12" required></textarea>
+                    <br />
+                    <input name="boton1" type="image" src="~/Content/img/siguiente.png" style="height: 50px; margin-top: 50px; width: 50px;">
+                </form>
+            </div>
+        </div>
+        
+    </div>
+
+</section>

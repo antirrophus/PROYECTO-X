@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "1AdProfesor";
+    Layout = "~/Views/Shared/_MasterPageLayout.cshtml";
+}
+
+<a name="ancla4"></a>
+<a name="ancla2"></a>
+<section id="sponsor">
+    <a href="@Url.Action("Administrar","Administracion")#ancla3">
+        <img src="~/Content/img/Regrasar.png" style="height: 50px; margin-left: 0px; width: 50px;" />
+    </a>
+    <h2></h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <a href="@Url.Action("AgregarProf", "Administracion")#anclaAP">
+                    <img src="~/Content/img/AdmPro/Crear.png" />
+                </a>
+                <h3>Agregar.</h3>
+                Seleccione para agregar un nuevo docente. Se recomienda completar al menos 90% del formulario a utilizar.
+            </div>
+            <div class="col-md-4">
+                <a href="@Url.Action("ActualizarProf", "Administracion")#anclaAcP">
+                    <img src="~/Content/img/AdmPro/Actualizar.png" />
+                </a>
+                <h3>Actualizar.</h3>
+                Seleccione el docente que desea editar. Opcion valida solamente para administradores.
+            </div>
+            <div class="col-md-4">
+                <a href="@Url.Action("EliminarProf", "Administracion")#anclaEP">
+                    <img src="~/Content/img/AdmPro/Eliminar.png" />
+                </a>
+                <h3>Eliminar.</h3>
+                Seleccione docente a eliminar de la base de datos. Datos no podran recuperarse luego de finalizada la accion.
+            </div>
+
+        </div>
+
+    </div>
+</section>

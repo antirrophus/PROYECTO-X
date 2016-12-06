@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="HIGADDv1ModelStoreContainer" CdmEntityContainer="HIGADDv1Entities3">
+    <EntitySetMapping Name="Asignaturas">
+      <EntityTypeMapping TypeName="IsTypeOf(HIGADDv1Model.Asignaturas)">
+        <MappingFragment StoreEntitySet="Asignaturas">
+          <ScalarProperty Name="id_asignatura" ColumnName="id_asignatura" />
+          <ScalarProperty Name="disciplina" ColumnName="disciplina" />
+          <ScalarProperty Name="nombre_discip" ColumnName="nombre_discip" />
+          <ScalarProperty Name="tipo_discip" ColumnName="tipo_discip" />
+          <ScalarProperty Name="anio" ColumnName="anio" />
+          <ScalarProperty Name="prerrequisito" ColumnName="prerrequisito" />
+          <ScalarProperty Name="precedencia" ColumnName="precedencia" />
+          <ScalarProperty Name="creditos" ColumnName="creditos" />
+          <ScalarProperty Name="horas" ColumnName="horas" />
+          <ScalarProperty Name="frecuencia_semanal" ColumnName="frecuencia_semanal" />
+          <ScalarProperty Name="semestre" ColumnName="semestre" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="recursos" ColumnName="recursos" />
+          <ScalarProperty Name="id_carrera" ColumnName="id_carrera" />
+          <ScalarProperty Name="id_plan_asignatura" ColumnName="id_plan_asignatura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Carreras">
+      <EntityTypeMapping TypeName="IsTypeOf(HIGADDv1Model.Carreras)">
+        <MappingFragment StoreEntitySet="Carreras">
+          <ScalarProperty Name="id_carrera" ColumnName="id_carrera" />
+          <ScalarProperty Name="nombre_carrera" ColumnName="nombre_carrera" />
+          <ScalarProperty Name="n_semestres" ColumnName="n_semestres" />
+          <ScalarProperty Name="id_Facultad" ColumnName="id_Facultad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DCA">
+      <EntityTypeMapping TypeName="IsTypeOf(HIGADDv1Model.DCA)">
+        <MappingFragment StoreEntitySet="DCA">
+          <ScalarProperty Name="id_dca" ColumnName="id_dca" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="semestre" ColumnName="semestre" />
+          <ScalarProperty Name="departamento" ColumnName="departamento" />
+          <ScalarProperty Name="fecha_e_dca" ColumnName="fecha_e_dca" />
+          <ScalarProperty Name="documento_dca" ColumnName="documento_dca" />
+          <ScalarProperty Name="id_departamento" ColumnName="id_departamento" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departamentos">
+      <EntityTypeMapping TypeName="IsTypeOf(HIGADDv1Model.Departamentos)">
+        <MappingFragment StoreEntitySet="Departamentos">
+          <ScalarProperty Name="id_departamento" ColumnName="id_departamento" />
+          <ScalarProperty Name="nombre_d" ColumnName="nombre_d" />
+          <ScalarProperty Name="id_Facultad" ColumnName="id_Facultad" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dia">
+      <EntityTypeMapping TypeName="IsTypeOf(HIGADDv1Model.Dia)">
+        <MappingFragment StoreEntitySet="Dia">
+          <ScalarProperty Name="id_dia" ColumnName="id_dia" />
+          <ScalarProperty Name="iniciales" ColumnName="iniciales" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Documentos">
+      <EntityTypeMapping TypeName="IsTypeOf(HIGADDv1Model.Documentos)">
+        <MappingFragment StoreEntitySet="Documentos">
+          <ScalarProperty Name="id_doc" ColumnName="id_doc" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+          <ScalarProperty Name="contenido" ColumnName="contenido" />
+          <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+          <ScalarProperty Name="objetivos" ColumnName="objetivos" />
+          <ScalarProperty Name="documento" ColumnName="documento" />
+          <ScalarProperty Name="locacion" ColumnName="locacion" />
+          <ScalarProperty Name="hora" ColumnName="hora" />
+          <ScalarProperty Name="fecha_e" ColumnName="fecha_e" />
+          <ScalarProperty Name="ID_G_A_P_A" ColumnName="ID_G_A_P_A" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Facultad">
+      <EntityTypeMapping TypeName="IsTypeOf(HIGADDv1Model.Facultad)">
+        <MappingFragment StoreEntitySet="Facultad">
+          <ScalarProperty Name="id_Facultad" ColumnName="id_Facultad" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="ubicacion" ColumnName="ubicacion" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grupo_Asig_C_A">
+      <EntityTypeMapping TypeName="IsTypeOf(HIGADDv1Model.Grupo_Asig_C_A)">
+        <MappingFragment StoreEntitySet="Grupo_Asig_C_A">
+          <ScalarProperty Name="ID_G_A_P_A" ColumnName="ID_G_A_P_A" />
+          <ScalarProperty Name="id_grupo" ColumnName="id_grupo" />
+          <ScalarProperty Name="fecha_ac" ColumnName="fecha_ac" />
+          <ScalarProperty Name="id_prof_asig" ColumnName="id_prof_asig" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Grupos">
+      <EntityTypeMapping TypeName="IsTypeOf(HIGADDv1Model.Grupos)">
+        <MappingFragment StoreEntitySet="Grupos">
+          <ScalarProperty Name="id_grupo" ColumnName="id_grupo" />
+          <ScalarProperty Name="anio" ColumnName="anio" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="id_turno" ColumnName="id_turno" />
+          <ScalarProperty Name="id_semestre" ColumnName="id_semestre" />
+          <ScalarProperty Name="id_carrera" ColumnName="id_carrera" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Horarios">
+      <EntityTypeMapping TypeName="IsTypeOf(HIGADDv1Model.Horarios)">
+        <MappingFragment StoreEntitySet="Horarios">
+          <ScalarProperty Name="id_horarios" ColumnName="id_horarios" />
+          <ScalarProperty Name="id_dia" ColumnName="id_dia" />
+          <ScalarProperty Name="id_hora" ColumnName="id_hora" />
+          <ScalarProperty Name="laboratorio" ColumnName="laboratorio" />
+          <ScalarProperty Name="ID_G_A_P_A" ColumnName="ID_G_A_P_A" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Horas">
+      <EntityTypeMapping TypeName="IsTypeOf(HIGADDv1Model.Horas)">
+        <MappingFragment StoreEntitySet="Horas">
+          <ScalarProperty Name="id_hora" ColumnName="id_hora" />
+          <ScalarProperty Name="hora" ColumnName="hora" />
+          <ScalarProperty Name="bloque" ColumnName="bloque" />
+          <ScalarProperty Name="turno" ColumnName="turno" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Laboratorios">
+      <EntityTypeMapping TypeName="IsTypeOf(HIGADDv1Model.Laboratorios)">
+        <MappingFragment StoreEntitySet="Laboratorios">
+          <ScalarProperty Name="id_lab" ColumnName="id_lab" />
+          <ScalarProperty Name="nombre_lab" ColumnName="nombre_lab" />
+          <ScalarProperty Name="ubicacion" ColumnName="ubicacion" />
+          <ScalarProperty Name="id_carrera" ColumnName="id_carrera" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Literatura_Doc">
+      <EntityTypeMapping TypeName="IsTypeOf(HIGADDv1Model.Literatura_Doc)">
+        <MappingFragment StoreEntitySet="Literatura_Doc">
+          <ScalarProperty Name="id_litdoc" ColumnName="id_litdoc" />
+          <ScalarProperty Name="nombre_libro" ColumnName="nombre_libro" />
+          <ScalarProperty Name="autor" ColumnName="autor" />
+          <ScalarProperty Name="edicion" ColumnName="edicion" />
+          <ScalarProperty Name="anio" ColumnName="anio" />
+          <ScalarProperty Name="presentacion_libro" ColumnName="presentacion_libro" />
+          <ScalarProperty Name="id_asignatura" ColumnName="id_asignatura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PC">
+      <EntityTypeMapping TypeName="IsTypeOf(HIGADDv1Model.PC)">
+        <MappingFragment StoreEntitySet="PC">
+          <ScalarProperty Name="id_PC" ColumnName="id_PC" />
+          <ScalarProperty Name="fecha_ela_pc" ColumnName="fecha_ela_pc" />
+          <ScalarProperty Name="documento_pc" ColumnName="documento_pc" />
+          <ScalarProperty Name="id_prof_asig" ColumnName="id_prof_asig" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PDC">
+      <EntityTypeMapping TypeName="IsTypeOf(HIGADDv1Model.PDC)">
+        <MappingFragment StoreEntitySet="PDC">
+          <ScalarProperty Name="id_pdc" ColumnName="id_pdc" />
+          <ScalarProperty Name="fecha_ela_pdc" ColumnName="fecha_ela_pdc" />
+          <ScalarProperty Name="documento_pdc" ColumnName="documento_pdc" />
+          <ScalarProperty Name="id_prof_asig" ColumnName="id_prof_asig" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Plan_asignatura">
+      <EntityTypeMapping TypeName="IsTypeOf(HIGADDv1Model.Plan_asignatura)">
+        <MappingFragment StoreEntitySet="Plan_asignatura">
+          <ScalarProperty Name="id_plan_asignatura" ColumnName="id_plan_asignatura" />
+          <ScalarProperty Name="nombre_plan" ColumnName="nombre_plan" />
+          <ScalarProperty Name="anio" ColumnName="anio" />
+          <ScalarProperty Name="fecha_E_PA" ColumnName="fecha_E_PA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Plan_tematico">
+      <EntityTypeMapping TypeName="IsTypeOf(HIGADDv1Model.Plan_tematico)">
+        <MappingFragment StoreEntitySet="Plan_tematico">
+          <ScalarProperty Name="id_plantema" ColumnName="id_plantema" />
+          <ScalarProperty Name="unidades" ColumnName="unidades" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="clase" ColumnName="clase" />
+          <ScalarProperty Name="clase_pract" ColumnName="clase_pract" />
+          <ScalarProperty Name="lab" ColumnName="lab" />
+          <ScalarProperty Name="contenido" ColumnName="contenido" />
+          <ScalarProperty Name="id_asignatura" ColumnName="id_asignatura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Prof_Asig">
+      <EntityTypeMapping TypeName="IsTypeOf(HIGADDv1Model.Prof_Asig)">
+        <MappingFragment StoreEntitySet="Prof_Asig">
+          <ScalarProperty Name="id_prof_asig" ColumnName="id_prof_asig" />
+          <ScalarProperty Name="horario_consulta" ColumnName="horario_consulta" />
+          <ScalarProperty Name="hora_clase" ColumnName="hora_clase" />
+          <ScalarProperty Name="hora_cp" ColumnName="hora_cp" />
+          <ScalarProperty Name="hora_lab" ColumnName="hora_lab" />
+          <ScalarProperty Name="id_profesor" ColumnName="id_profesor" />
+          <ScalarProperty Name="observaciones" ColumnName="observaciones" />
+          <ScalarProperty Name="id_asignatura" ColumnName="id_asignatura" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Profesor">
+      <EntityTypeMapping TypeName="IsTypeOf(HIGADDv1Model.Profesor)">
+        <MappingFragment StoreEntitySet="Profesor">
+          <ScalarProperty Name="id_profesor" ColumnName="id_profesor" />
+          <ScalarProperty Name="nombre_profesor" ColumnName="nombre_profesor" />
+          <ScalarProperty Name="apellido_profesor" ColumnName="apellido_profesor" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="cedula" ColumnName="cedula" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="genero" ColumnName="genero" />
+          <ScalarProperty Name="fecha_ingreso" ColumnName="fecha_ingreso" />
+          <ScalarProperty Name="nivel_acad" ColumnName="nivel_acad" />
+          <ScalarProperty Name="tipo_carga" ColumnName="tipo_carga" />
+          <ScalarProperty Name="id_departamento" ColumnName="id_departamento" />
+          <ScalarProperty Name="tipo_contrato" ColumnName="tipo_contrato" />
+          <ScalarProperty Name="cargo" ColumnName="cargo" />
+          <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Semestre">
+      <EntityTypeMapping TypeName="IsTypeOf(HIGADDv1Model.Semestre)">
+        <MappingFragment StoreEntitySet="Semestre">
+          <ScalarProperty Name="id_semestre" ColumnName="id_semestre" />
+          <ScalarProperty Name="f_inicio" ColumnName="f_inicio" />
+          <ScalarProperty Name="f_fin" ColumnName="f_fin" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="feriados" ColumnName="feriados" />
+          <ScalarProperty Name="anio_academico" ColumnName="anio_academico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Turnos">
+      <EntityTypeMapping TypeName="IsTypeOf(HIGADDv1Model.Turnos)">
+        <MappingFragment StoreEntitySet="Turnos">
+          <ScalarProperty Name="id_turno" ColumnName="id_turno" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Usuarios">
+      <EntityTypeMapping TypeName="IsTypeOf(HIGADDv1Model.Usuarios)">
+        <MappingFragment StoreEntitySet="Usuarios">
+          <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+          <ScalarProperty Name="NombreUsuario" ColumnName="NombreUsuario" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="TipoUsuario" ColumnName="TipoUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SP_VerCarreras1" FunctionName="HIGADDv1Model.Store.SP_VerCarreras" />
+    <FunctionImportMapping FunctionImportName="SP_GuardarSemestre1" FunctionName="HIGADDv1Model.Store.SP_GuardarSemestre" />
+    <FunctionImportMapping FunctionImportName="SP_VerSemestre" FunctionName="HIGADDv1Model.Store.SP_VerSemestre">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HIGADDv1Model.SP_VerSemestre_Result">
+          <ScalarProperty Name="id_semestre" ColumnName="id_semestre" />
+          <ScalarProperty Name="f_inicio" ColumnName="f_inicio" />
+          <ScalarProperty Name="f_fin" ColumnName="f_fin" />
+          <ScalarProperty Name="nombre" ColumnName="nombre" />
+          <ScalarProperty Name="feriados" ColumnName="feriados" />
+          <ScalarProperty Name="anio_academico" ColumnName="anio_academico" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_VerSemestre1" FunctionName="HIGADDv1Model.Store.SP_VerSemestre" />
+    <FunctionImportMapping FunctionImportName="SP_VerProfe1" FunctionName="HIGADDv1Model.Store.SP_VerProfe" />
+    <FunctionImportMapping FunctionImportName="SP_GuardarProfe1" FunctionName="HIGADDv1Model.Store.SP_GuardarProfe" />
+    <FunctionImportMapping FunctionImportName="SP_BuscarProfe" FunctionName="HIGADDv1Model.Store.SP_BuscarProfe">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="HIGADDv1Model.SP_BuscarProfe_Result">
+          <ScalarProperty Name="id_profesor" ColumnName="id_profesor" />
+          <ScalarProperty Name="nombre_profesor" ColumnName="nombre_profesor" />
+          <ScalarProperty Name="apellido_profesor" ColumnName="apellido_profesor" />
+          <ScalarProperty Name="telefono" ColumnName="telefono" />
+          <ScalarProperty Name="cedula" ColumnName="cedula" />
+          <ScalarProperty Name="correo" ColumnName="correo" />
+          <ScalarProperty Name="genero" ColumnName="genero" />
+          <ScalarProperty Name="fecha_ingreso" ColumnName="fecha_ingreso" />
+          <ScalarProperty Name="nivel_acad" ColumnName="nivel_acad" />
+          <ScalarProperty Name="tipo_carga" ColumnName="tipo_carga" />
+          <ScalarProperty Name="id_departamento" ColumnName="id_departamento" />
+          <ScalarProperty Name="tipo_contrato" ColumnName="tipo_contrato" />
+          <ScalarProperty Name="cargo" ColumnName="cargo" />
+          <ScalarProperty Name="IDUsuario" ColumnName="IDUsuario" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_EliminarProfe" FunctionName="HIGADDv1Model.Store.SP_EliminarProfe" />
+    <FunctionImportMapping FunctionImportName="SP_BuscarProfe1" FunctionName="HIGADDv1Model.Store.SP_BuscarProfe" />
+    <FunctionImportMapping FunctionImportName="SP_EliminarProfe1" FunctionName="HIGADDv1Model.Store.SP_EliminarProfe" />
+  </EntityContainerMapping>
+</Mapping>

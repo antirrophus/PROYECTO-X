@@ -1,0 +1,205 @@
+﻿@{
+    ViewBag.Title = "1SubAdProfAgregar";
+    Layout = "~/Views/Shared/_MasterPageLayout.cshtml";
+}
+<a name="anclaAP"></a>
+@using (Html.BeginForm("GuardarProf", "Administracion", FormMethod.Post))
+{
+<section id="sponsor">
+    <a href="@Url.Action("AdProfesor","Administracion")#ancla2">
+        <img src="~/Content/img/Regrasar.png" style="height: 50px; margin-left: 0px; width: 50px;" />
+    </a>
+    <h2>AGREGAR DOCENTE</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"></div>
+
+            <div class="col-md-8">
+                <form>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-7">
+                            <input type="text" class="form-control" name="Nombre" placeholder="Nombres:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <div class="col-md-4" style="text-align: left;">
+                            <h4>Primer y Segundo Nombre</h4>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-7">
+                            <input type="text" class="form-control" name="Apellido" placeholder="Apellidos:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <div class="col-md-4" style="text-align: left;">
+                            <h4>Primer y Segundo Apellido</h4>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <p></p>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" name="Cedula" placeholder="Numero de Cedula:" pattern="([0-9]{3}-[0-9]{6}-([0-9]{4}[A-Z]{1}))" required>
+                            <!--no se si incluir los espacios como caracter o dejar todo junto :/-->
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <input type="tel" class="form-control" name="Telefono" placeholder="Telefono:" pattern="[0-9]{8}" required>
+                            <!--existe un input tipo TEL ¿lo ocupamos?-->
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" name="Genero" placeholder="Genero M|F:" pattern="M|F|m|f" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <p></p>
+                        <div class="col-md-4">
+                            <input type="email" class="form-control" name="Correo" placeholder="Email:" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        
+                        <p></p>
+                        <div class="col-md-3">
+                            <input type="text" class="form-control" name="NumEmpleado" placeholder="Numero de Empleado:" pattern="[0-9]{4}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" name="IDDept" placeholder="Departamento:" pattern="[A-Z(0-9)]{4,48}" required><!---el id del departamento o el nombre--->
+                            <i class="fa fa-check check-ok"></i><!----------------consulta, todos los departementos sin importar la carrera.------------------->
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <p></p>
+                        <div class="col-md-4">
+                            
+                        </div>
+
+                        <p></p>
+                        <div class="col-md-3">
+                            
+                        </div>
+                        <p></p>
+                        <div class="col-md-4">
+                            <textarea class="form-control" placeholder="AQUI VAN A IR LOS departaemtos de LA CARRERA" name="message" rows="9"></textarea><!----------------consulta, todos los departementos sin importar la carrera.------------------->
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 0px;">
+                        <p></p>
+                        <div class="col-md-4">
+                            <div class="row" style="margin-bottom: 0px;">
+                                <div class="col-md-6">
+                                    <h4>Tipo de Contrato</h4>
+                                </div>
+                                <div class="col-md-3">
+                                    <h4>
+                                        <select name="TipoContrato">
+                                            <option value="TC-40">TC-40</option>
+                                            <option value="TC-140">TC-140</option>
+                                            <option value="HE">HE</option>
+                                            <option value="MD">MD</option>
+                                        </select>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <div class="row" style="margin-bottom: 0px;">
+                                <div class="col-md-6">
+                                    <h4>Nivel Academico</h4>
+                                </div>
+                                <div class="col-md-3">
+                                    <h4>
+                                        <select name="NivelAcad">
+                                            <option value="Ing.">Ing.</option>
+                                            <option value="MSc.">MSc.</option>
+                                            <option value="Lic.">Lic.</option>
+                                            <option value="Tkl.">Tkl.</option>
+                                            <option value="Dr.">Dr.</option>
+                                            <option value="MBA">MBA</option>
+                                            <option value="Esp">Esp</option>
+                                            <option value="TS">TS</option>
+                                        </select>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <div class="row" style="margin-bottom: 0px;">
+                                <div class="col-md-4">
+                                    <h4>Cargo</h4>
+                                </div>
+                                <div class="col-md-5">
+                                    <h4>
+                                        <select name="Cargo">
+                                            <option value="NULL"></option>
+                                            <option value="1">Jefe Departamento</option>
+                                        </select>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <p></p>
+                        
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <p></p>
+                        <div class="col-md-4">
+                            <div class="row" style="margin-bottom: 0px;">
+                                <div class="col-md-6">
+                                    <h4>Tipo de Carga</h4>
+                                </div>
+                                <div class="col-md-3">
+                                    <h4>
+                                        <select name="TipoCarga">
+                                            <option value="R">R</option>
+                                            <option value="HI">HI</option>
+                                            <option value="HE">HE</option>
+                                            <option value="MD">MD</option>
+                                            <option value="P">P</option>
+                                        </select>
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4 style="padding-left: 10px; text-align: left;">Fecha de Ingreso:</h4>
+                            <input type="date" class="form-control" name="FechaIngreso" required>
+                            <i class="fa fa-check check-ok"></i>
+                            <!--formato de la fecha --DD/MM/AAAA-->
+                        </div>
+                        <p></p>
+
+                    </div>
+                    <br/>
+                    <!--TEXTO-->
+                    <div class="row" style="margin-bottom: 20px; text-align: justify;">
+                        <div class="col-md-11">
+                            <b style="color: black;">
+                                Nivel Académico: TS: Técnico Superior, Lic.: Licenciado. Ing.: Ingeniero. Esp:Especialista. MBA: Master en Admon de Empresas. MSc.: Master en Ciencias Dr.: Director.
+                            </b>
+                            <p></p>
+                            <b style="color: black;">
+                                Tipo de Carga: P: Posgrado. R: Regular o de Planta. HI: Horario Interno HE: Horario Externo MD: Medio Tiempo.
+                            </b>
+                            <p></p>
+                            <b style="color: black;">
+                                Tipo de Contrato: TC-40: Contrato Fijo 40 Horas. TC-140: Contrato Fijo 140-Horas. HE: Profesor Horario. MD: Medio Tiempo.
+                            </b>
+                        </div>
+                    </div>
+                    <input name="boton1" type="image" src="~/Content/img/guardar.png" style="height: 50px; margin-top: 50px; width: 50px;">
+                </form>
+            </div>
+        </div>
+        
+    </div>
+
+</section>
+}

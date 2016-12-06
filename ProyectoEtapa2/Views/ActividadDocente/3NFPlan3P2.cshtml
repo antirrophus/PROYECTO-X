@@ -1,0 +1,1138 @@
+﻿@{
+    ViewBag.Title = "3NFPlan3P2";
+    Layout = "~/Views/Shared/_MasterPageLayout.cshtml";
+}
+
+<section id="sponsor">
+    <a name="anclaSG"></a>
+    <a href="@Url.Action("IAGCAS1","ActividadDocente")#ancla4">
+        <img src="~/Content/img/Regrasar.png" style="height: 50px; margin-left: 0px; width: 50px;" /><!-------------quitamos este boton??, seria para impedor que retorne y no termine el documento-------->
+    </a>
+
+    <p></p>
+    <!------------DOCUMENTO OFICIAL----------->
+    <h2>INFORME ACDÉMICO POR GRUPO DE CLASES ASISTIDO EN SEMESTRE</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+
+            <div class="col-md-10">
+
+                <form>
+
+                    <!--14) Presentacion de Asignatura y Grupo :v-->
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-3">
+                            <h4>Asignatura:</h4>
+                        </div>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" placeholder="AQUI APARECERA LA ASIGNATURA:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}">
+                        </div>
+                        <div class="col-md-2">
+                            <h4>Grupo de Clase:</h4>
+                        </div>
+                        <div class="col-md-2">
+                            <input type="text" class="form-control" placeholder="GXXXX" pattern="([1-5][M|T|N][1-5]-[CO|TQ|EL]{2})">
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px; text-align:left;">
+                        <div class="col-md-1">
+                            <h4>paguina:</h4>
+                        </div>
+                        <div class="col-md-1">
+                            <input type="text" class="form-control" pattern="[1-9]{1}" style="border: 2px solid green; height: 40px; width: 55px;">
+                        </div>
+                        <div class="col-md-1">
+                            <h4>de:</h4>
+                        </div>
+                        <div class="col-md-1">
+                            <input type="text" class="form-control" pattern="[1-9]{1}" style="border: 2px solid green; height: 40px; width: 55px;">
+                        </div>
+                    </div>
+
+                    <!--15) encabezado Coloque en la casilla en blanco el número correspondiente unidades del programa planificadas y ejecutadas.-->
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <!--poner un background color y un border raduius aqui para llamar la atencion-->
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-9">
+                            <h4 style="margin-bottom: 10px; color: red;">Coloque en la casilla en blanco el numero correspondiente unidades del programa planificadas y ejecutadas.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                    </div>
+                    <!--Rellenar datos-->
+                    <!--primera linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-6" style="text-align: left;">
+                            <h4>Unidades Planificadas en la Asignatura/Semestre</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="1" max="9" class="form-control" required style="border: 2px solid red; height: 40px; width: 55px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-2">
+                            <input type="number" min="0" max="100" class="form-control" placeholder=" % automatico " style=" height: 40px; width: 120px;">
+                        </div>
+                    </div>
+                    <!--segunda linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-6" style="text-align: left;">
+                            <h4>Unidades Ejecutadas en la Asignatura/Semestre</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="1" max="9" class="form-control" required style="border: 2px solid red; height: 40px; width: 55px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-2">
+                            <input type="number" min="0" max="100" class="form-control" placeholder=" % automatico "  style=" height: 40px; width: 120px;">
+                        </div>
+                    </div>
+                    <!--tercera linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-6" style="text-align: left;">
+                            <h4>Unidades no Ejecutadas en la Asignatura/Semestre</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="9" class="form-control" required style="border: 2px solid red; height: 40px; width: 55px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-2">
+                            <input type="number" min="0" max="100" class="form-control" placeholder=" % automatico " style=" height: 40px; width: 120px;">
+                        </div>
+                    </div>
+
+                    <!--16) encabezado Coloque en la casilla en blanco el número correspondiente a las horas según las preguntas.-->
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <!--poner un background color y un border raduius aqui para llamar la atencion-->
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-9">
+                            <h4 style="margin-bottom: 10px; color: red;">Coloque en la casilla en blanco el número correspondiente a las horas según las preguntas.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                    </div>
+                    <!--Rellenar datos-->
+                    <!--primera linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-6" style="text-align: left;">
+                            <h4>Horas planificadas en la Asignatura/Semestre</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" max="120" class="form-control" required style="border: 2px solid red; height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-2">
+                            <input type="number" min="0" max="100" class="form-control" placeholder=" % automatico " style=" height: 40px; width: 120px;">
+                        </div>
+                    </div>
+                    <!--segunda linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-6" style="text-align: left;">
+                            <h4>Horas ejecutadas en la Asignatura/Semestre</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" max="120" class="form-control" required style="border: 2px solid red; height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-2">
+                            <input type="number" min="0" max="100" class="form-control" placeholder=" % automatico " style=" height: 40px; width: 120px;">
+                        </div>
+                    </div>
+                    <!--tercera linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-6" style="text-align: left;">
+                            <h4>Horas no ejecutadas en la Asignatura/Semestre</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" max="120" class="form-control" required style="border: 2px solid red; height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-2">
+                            <input type="number" min="0" max="100" class="form-control" placeholder=" % automatico " style=" height: 40px; width: 120px;">
+                        </div>
+                    </div>
+                    <!--cuarta linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-6" style="text-align: left;">
+                            <h4>Horas de reposiciones de clases no ejecutadas/Semestre</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" max="120" class="form-control" required style="border: 2px solid red; height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-2">
+                            <input type="number" min="0" max="100" class="form-control" placeholder=" % automatico " style=" height: 40px; width: 120px;">
+                        </div>
+                    </div>
+
+                    <!--17) encabezado Coloque en la casilla en blanco el número correspondiente a lo que se pregunta.-->
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <!--poner un background color y un border raduius aqui para llamar la atencion-->
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-9">
+                            <h4 style="margin-bottom: 10px; color: red;">Coloque en la casilla en blanco el número correspondiente a lo que se pregunta.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                    </div>
+                    <!--Rellenar datos-->
+                    <!--primera linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-6" style="text-align: left;">
+                            <h4>Sesiones de (1,2,3,4,5) horas planificadas en la Asignatura/Semestre</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" max="120" class="form-control" required style="border: 2px solid red; height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-2">
+                            <input type="number" min="0" max="100" class="form-control" placeholder=" % automatico " style=" height: 40px; width: 120px;">
+                        </div>
+                    </div>
+                    <!--segunda linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-6" style="text-align: left;">
+                            <h4>Numero de ausencias al aula en el Semestre</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" max="100" class="form-control" required style="border: 2px solid red; height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-2">
+                            <input type="number" min="0" max="100" class="form-control" placeholder=" % automatico " style=" height: 40px; width: 120px;">
+                        </div>
+                    </div>
+                    <!--tercera linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-6" style="text-align: left;">
+                            <h4>Ausencias al aula justificadas en el Semestre</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" max="100" class="form-control" required style="border: 2px solid red; height: 40px; width:70px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-2">
+                            <input type="number" min="0" max="100" class="form-control" placeholder=" % automatico " style=" height: 40px; width: 120px;">
+                        </div>
+                    </div>
+                    <!--cuarta linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-6" style="text-align: left;">
+                            <h4>Ausencias al aula no justificadas en el Semestre</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" max="100" class="form-control" required style="border: 2px solid red; height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-2">
+                            <input type="number" min="0" max="100" class="form-control" placeholder=" % automatico " style=" height: 40px; width: 120px;">
+                        </div>
+                    </div>
+
+                    <!--18) En cuadro blanco ubique el  número  de las  ausencias acorde al motivo:-->
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-9">
+                            <h4 style="color: black;">Señale los motivos de las ausencias:</h4><!--esto en negrilla-->
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                    </div>
+                    <!--texto en Azul-->
+                    <h4 style="margin-bottom: 0px; color:#27119a; text-align:left;">En cuadro en azul borde azul, ubique el  número  de las  ausencias acorde al motivo:</h4>
+                    <!--Rellenar datos-->
+                    <!--primera linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-4" style="text-align: left;">
+                            <h4>No llegaron los estudiantes.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" class="form-control" style=" height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--segunda linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-4" style="text-align: left;">
+                            <h4>Motivos UNI no planificados.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" class="form-control" style=" height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--tercera linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-4" style="text-align: left;">
+                            <h4>Problemas familiares.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" class="form-control" style=" height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--cuarta linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-4" style="text-align: left;">
+                            <h4>problemas de salud.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" class="form-control" style=" height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--quinta linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-4" style="text-align: left;">
+                            <h4>Asuntos personales.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" class="form-control" style=" height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--sexta linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-4" style="text-align: left;">
+                            <h4>Otros/Especifique.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" class="form-control" style=" height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <input type="text" class="form-control" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{6,80}" style=" border-color:#777777; height: 40px;">
+                        </div>
+                    </div>
+                    <!--TOTAL-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-4" style="color:black; text-align: center;">
+                            <h4>TOTAL.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" class="form-control" style=" border-color:black; height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                    </div>
+
+                    <!--19) Coloque un número, veces/semestre, indicando frecuencia de   utilización de los medios de apoyo a la docencia-->
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-9">
+                            <h4 style="color: black;">Señale frecuencia de utilización de medios en el semestre:</h4><!--esto en negrilla-->
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                    </div>
+                    <!--texto en Azul-->
+                    <h4 style="margin-bottom: 0px; color:#27119a; text-align:left;">Coloque un número, veces/semestre, indicando frecuencia de   utilización de los medios de apoyo a la docencia:</h4>
+                    <!--Rellenar datos-->
+                    <!--primera linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-4" style="text-align: left;">
+                            <h4>Laboratorio-Computadoras.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="100" class="form-control" required style=" height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--segunda linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-4" style="text-align: left;">
+                            <h4>Auditorio-Data show.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="100" class="form-control" required style=" height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--tercera linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-4" style="text-align: left;">
+                            <h4>Aulas de clases-Retroproyector.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="100" class="form-control" required style=" height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--cuarta linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-4" style="text-align: left;">
+                            <h4>Aulas de clases-Rota folio.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="100" class="form-control" required style=" height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--quinta linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-4" style="text-align: left;">
+                            <h4>Plataforma de la UOL.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="100" class="form-control" required style=" height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--sexta linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-4" style="text-align: left;">
+                            <h4>Otros/Especifique.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="100" class="form-control" style=" height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <input type="text" class="form-control" style=" border-color:#777777; height: 40px;">
+                        </div>
+                    </div>
+                    <!--TOTAL-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-4" style="color:black; text-align: center;">
+                            <h4>TOTAL.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="100" class="form-control" style=" border-color:black; height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                    </div>
+
+                    <!--20) Actitud de los estudiantes---- Coloque el número 1 en la casillas en blanco, para calificar los ítems de la vertical según Ud. crea conveniente.-->
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-9">
+                            <h4 style="color: black;">Actitud de los estudiantes:</h4><!--esto en negrilla-->
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                    </div>
+                    <!--texto en Azul y Rojo-->
+                    <h4 style="margin-bottom: 0px; color:#27119a; text-align:left;">Coloque el número en la casillas en blanco, para calificar los ítems de la vertical según Ud. crea conveniente</h4>
+                    <h4 style="margin-bottom: 0px; color:red; text-align:center;">6,7,8,9,10. Con 6 como el minimo requerido, 8 medio y 10 como maximo</h4>
+                    <!--Rellenar datos-->
+                    <!--primera linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3">
+                        </div>
+                        <p></p>
+                        <div class="col-md-4" style="text-align: left;">
+                            <h4>Puntualidad en la asistencia.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="text" class="form-control" pattern="(6|7|8|9|10)" required style=" height: 40px; width: 55px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--segunda linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3">
+                        </div>
+                        <p></p>
+                        <div class="col-md-4" style="text-align: left;">
+                            <h4>Disposicion a la clase.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="text" class="form-control" pattern="(6|7|8|9|10)" required style=" height: 40px; width: 55px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--tercera linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3">
+                        </div>
+                        <p></p>
+                        <div class="col-md-4" style="text-align: left;">
+                            <h4>Relación con el Docente.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="text" class="form-control" pattern="(6|7|8|9|10)" required style=" height: 40px; width: 55px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--cuarta linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3">
+                        </div>
+                        <p></p>
+                        <div class="col-md-4" style="text-align: left;">
+                            <h4>Cumplimiento de horas de consulta.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="text" class="form-control" pattern="(6|7|8|9|10)" required style=" height: 40px; width: 55px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--quinta linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3">
+                        </div>
+                        <p></p>
+                        <div class="col-md-4" style="text-align: left;">
+                            <h4>Trabajo en equipo.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="text" class="form-control" pattern="(6|7|8|9|10)" required style=" height: 40px; width: 55px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--sexta linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3">
+                        </div>
+                        <p></p>
+                        <div class="col-md-4" style="text-align: left;">
+                            <h4>Cumplimiento tareas-extra clases.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="text" class="form-control" pattern="(6|7|8|9|10)" required style=" height: 40px; width: 55px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--TOTAL-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3">
+                        </div>
+                        <p></p>
+                        <div class="col-md-4" style="color:black; text-align: center;">
+                            <h4>TOTAL.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="60" class="form-control" style=" border-color:black; height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                    </div>
+
+                    <!--21) Rendimiento Academico-->
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-9">
+                            <h4 style="color: black;">Rendimiento Academico</h4><!--esto en negrilla-->
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                    </div>
+                    <!--Rellenar datos-->
+                    <!--primera linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <h4>Matricula Oficial.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="10" max="50" class="form-control" required style=" height: 40px; width: 65px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--segunda linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <h4>Matricula efectiva.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="10" max="50" class="form-control" required style=" height: 40px; width: 65px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <h4>% Matricula efectiva.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="100" class="form-control" placeholder="%calculdo" style="border-color:black; height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--tercera linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <h4>Número aprobados.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="50" class="form-control" required style=" height: 40px; width: 65px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <h4>% Aprobados.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="100" class="form-control" placeholder="%calculado" style=" border-color:black; height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--cuarta linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <h4>Numero de reprobados.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="60" class="form-control" placeholder="calculado" style=" border-color:black; height: 40px; width: 65px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <h4>% de reprobados.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <input type="number" min="0" max="100" class="form-control" placeholder="%calculado" style=" border-color:black; height: 40px;  width: 70px;">
+                        </div>
+                    </div>
+                    <!--quinta linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-2" style="color:black; text-align: left;">
+                            <h4>MAYOR NOTA.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="60" max="100" class="form-control" required style=" border-color:black; height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-2" style="color:black; text-align: left;">
+                            <h4>MENOR NOTA.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="99" class="form-control" required style=" border-color:black; height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-5" style="color:black; text-align: left;">
+                            <h4>PROMEDIO DE NOTA DE ASIGNATURA.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="100" class="form-control" required style=" border-color:black; height: 40px; width: 70px;">
+                        </div>
+                        <p></p>
+                    </div>
+
+                    <!--22) Número de guías elaboradas en el semestre.-->
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-9">
+                            <h4 style="color: black;">Guías Didácticas elaboradas de :</h4><!--esto en negrilla-->
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                    </div>
+                    <!--texto en Azul-->
+                    <h4 style="margin-bottom: 0px; color:#27119a; text-align:left;">En cuadro blanco ubique el número de guías elaboradas en el semestre:</h4>
+                    <!--Rellenar datos-->
+                    <!--primera linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <h4>Conferencias.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="20" class="form-control" required style=" height: 40px; width: 65px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--segunda linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <h4>Clases prácticas.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="20" class="form-control" required style=" height: 40px; width: 65px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--tercera linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <h4>Talleres-UOL.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="20" class="form-control" required style=" height: 40px; width: 65px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--cuarta linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <h4>Laboratorios.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="20" class="form-control" required style=" height: 40px; width: 65px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--quinta linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <h4>Giras de campo.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="20" class="form-control" required style=" height: 40px; width: 65px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--sexta linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <h4>proyectos de curso.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="20" class="form-control" required style=" height: 40px; width: 65px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--septima linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <h4>Trabajos de curso.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="20" class="form-control" required style=" height: 40px; width: 65px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--TOTAL-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="color:black; text-align: center;">
+                            <h4>TOTAL.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="80" class="form-control" style=" border-color:black; height: 40px; width: 65px;">
+                        </div>
+                        <p></p>
+                    </div>
+
+                    <!--23) notas mas altas-->
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <!--poner un background color y un border raduius aqui para llamar la atencion-->
+                        <p></p>
+                        <div class="col-md-5">
+                            <h4 style="color: black;">Nombre los estudiantes con mayor calificaciones:</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-5">
+                            <h4 style="color: #27119a;">calificación obtenida:</h4><!--esto en negrilla-->
+                        </div>
+                    </div>
+                    <!--Rellenar datos-->
+                    <!--primera linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-6" style="text-align: left;">
+                            <input type="text" class="form-control" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-2">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="60" max="100" class="form-control" required style="height: 40px; width: 70px;">
+                        </div>
+                    </div>
+                    <!--segunda linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-6" style="text-align: left;">
+                            <input type="text" class="form-control" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-2">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="60" max="100" class="form-control" required style="height: 40px; width: 70px;">
+                        </div>
+                    </div>
+                    <!--tercera linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-6" style="text-align: left;">
+                            <input type="text" class="form-control" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-2">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="60" max="100" class="form-control" required style="height: 40px; width: 70px;">
+                        </div>
+                    </div>
+                    <!--cuarta linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-6" style="text-align: left;">
+                            <input type="text" class="form-control" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-2">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="60" max="100" class="form-control" required style="height: 40px; width: 70px;">
+                        </div>
+                    </div>
+
+                    <!--24) mejor trabajo del curso-->
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <!--poner un background color y un border raduius aqui para llamar la atencion-->
+                        <p></p>
+                        <div class="col-md-5">
+                            <h4 style="color: black;">Nombre los 3 mejores trabjos del curso:</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-5">
+                            <h4 style="color: #27119a;">Nombre de los autores del trabajo del curso:</h4><!--esto en negrilla-->
+                        </div>
+                    </div>
+                    <!--Rellenar datos-->
+                    <!--primera linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-6" style="text-align: left;">
+                            <input type="text" class="form-control" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-6" style="text-align: left;">
+                            <input type="text" class="form-control" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" required>
+                        </div>
+                    </div>
+                    <!--segunda linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-6" style="text-align: left;">
+                            <input type="text" class="form-control" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-6" style="text-align: left;">
+                            <input type="text" class="form-control" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" required>
+                        </div>
+                    </div>
+                    <!--tercera linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-6" style="text-align: left;">
+                            <input type="text" class="form-control" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-6" style="text-align: left;">
+                            <input type="text" class="form-control" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" required>
+                        </div>
+                    </div>
+
+                    <!--25) Formas de evaluación utilizadas en el  semestre.-->
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-9">
+                            <h4 style="color: black;">Formas de evaluación utilizadas en el  semestre:</h4><!--esto en negrilla-->
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                    </div>
+                    <!--texto en Azul y Rojo-->
+                    <h4 style="margin-bottom: 0px; color:#27119a; text-align:left;">Coloque el número en la casillas en blanco, para planificar los ítems de la vertical según Ud. crea conveniente.</h4>
+                    <h4 style="margin-bottom: 0px; color:red; text-align:center;">6,7,8,9,10. Con 6-Nunca, 7-Pocas veces, 8-Medio, 9-casi siempre y 10 Siempre</h4>
+                    <!--Rellenar datos-->
+                    <!--primera linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3">
+                        </div>
+                        <p></p>
+                        <div class="col-md-4" style="text-align: left;">
+                            <h4>Sistemáticos.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="text" class="form-control" pattern="(6|7|8|9|10)" required style=" height: 40px; width: 55px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--segunda linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3">
+                        </div>
+                        <p></p>
+                        <div class="col-md-4" style="text-align: left;">
+                            <h4>Trabajos extra clases (tareas).</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="text" class="form-control" pattern="(6|7|8|9|10)" required style=" height: 40px; width: 55px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--tercera linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3">
+                        </div>
+                        <p></p>
+                        <div class="col-md-4" style="text-align: left;">
+                            <h4>Corte parciales de TC.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="text" class="form-control" pattern="(6|7|8|9|10)" required style=" height: 40px; width: 55px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--cuarta linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3">
+                        </div>
+                        <p></p>
+                        <div class="col-md-4" style="text-align: left;">
+                            <h4>Examenes parcial (nota parcial).</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="text" class="form-control" pattern="(6|7|8|9|10)" required style=" height: 40px; width: 55px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--quinta linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3">
+                        </div>
+                        <p></p>
+                        <div class="col-md-4" style="text-align: left;">
+                            <h4>Examen final (nota parcial).</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="text" class="form-control" pattern="(6|7|8|9|10)" required style=" height: 40px; width: 55px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--sexta linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3">
+                        </div>
+                        <p></p>
+                        <div class="col-md-4" style="text-align: left;">
+                            <h4>trabajo de curso (nota final).</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="text" class="form-control" pattern="(6|7|8|9|10)" required style=" height: 40px; width: 55px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--septima linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3">
+                        </div>
+                        <p></p>
+                        <div class="col-md-4" style="text-align: left;">
+                            <h4>Proyecto de curso.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="text" class="form-control" pattern="(6|7|8|9|10)" required style=" height: 40px; width: 55px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!--TOTAL-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3">
+                        </div>
+                        <p></p>
+                        <div class="col-md-4" style="color:black; text-align: center;">
+                            <h4>TOTAL.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="number" min="0" max="70" class="form-control" style=" border-color:black; height: 40px; width: 55px;">
+                        </div>
+                        <p></p>
+                    </div>
+                    <!---------
+                        <a href="@Url.Action("IAGCAS2","ActividadDocente")#anclaSG">
+                            <input name="boton1" type="image" src="~/Content/img/siguiente.png" style="height: 50px; margin-top: 50px; width: 50px;">
+                         </a>
+                    --------->
+
+                </form>
+            </div>
+        </div>
+        <a href="#anclaSG">
+            <img src="~/Content/img/siguiente.png" style="height: 50px; margin-left: 0px; width: 50px;" />
+        </a>
+    </div>
+
+</section>

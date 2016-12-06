@@ -1,0 +1,362 @@
+﻿@{
+    ViewBag.Title = "4DocumentosV";
+    Layout = "~/Views/Shared/_MasterPageLayout.cshtml";
+}
+
+<section id="sponsor">
+    <a name="ancla4"></a>
+    <p></p>
+    <h2></h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2">
+                <textarea class="form-control" placeholder="AQUI VAN A IR los laboratorios de la carrera" name="message" rows="8"></textarea>
+                <!-----------consulta, muestra todas los laboratorios de la BD------------>
+                <br />
+                <textarea class="form-control" placeholder="AQUI VAN A IR los grupos de las carreras" name="message" rows="25"></textarea>
+                <!-----------consulta, muestra todos los grupos de la carreras de la BD------------>
+            </div>
+
+            <div class="col-md-8">
+                <!--Runiones metodologuicas-->
+                <form>
+                    <div class="row" style="margin-bottom: 10px;">
+                        <div class="col-md-10">
+                            <ul style="list-style-type: square">
+                                <li style="color: #27119a; font-size: 30px;">
+                                    <h3 style="padding-left: 10px; text-align: left;">Reuniones Metodológicas</h3>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" placeholder="Asignatura:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{4,48}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" placeholder="Agregar Lista de Asistencia:SUBIR DOCUMENTO"><!--------Esto es para subir el documento-------->
+                        </div>
+                        <div class="col-md-1">
+                            <img src="~/Content/img/subir.png" style="height: 25px; margin-top: 10px; width: 25px;" /><!---boton subir--->
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-3">
+                            <h4 style="padding-left: 10px; text-align: left;">Fecha de reunión</h4>
+                            <input type="date" class="form-control" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 10px;">
+                        <div class="col-md-10">
+                            <h4 style="padding-left: 10px; text-align: left;">Profesores con la Misma Asignatura</h4>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-6">
+                            <textarea class="form-control" name="dvrmprofesor" rows="5"  required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <div class="col-md-1">
+                            <img src="~/Content/img/grupo-docente.png" style="height: 50px; margin-top: 10px; width: 50px;" />
+                        </div>
+                        <input name="boton1" type="image" src="~/Content/img/guardar.png" style="height: 50px; margin-top: 10px; width: 50px;">
+                    </div>
+                </form>
+
+                <!--Horas de consultas-->
+                <form>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <ul style="list-style-type: square">
+                                <li style="color: #27119a; font-size: 30px;">
+                                    <h3 style="padding-left: 10px; text-align: left;">Horas de Consultas</h3>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" placeholder="Asignatura:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{4,48}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" placeholder="Agregar Lista de Asistencia:SUBIR DOCUMENTO"><!--------Esto es para subir el documento-------->
+                        </div>
+                        <div class="col-md-1">
+                            <img src="~/Content/img/subir.png" style="height: 25px; margin-top: 10px; width: 25px;" /><!---boton subir--->
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-3">
+                            <h4 style="padding-left: 10px; text-align: left;">Fecha de Consulta:</h4>
+                            <input type="date" class="form-control" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-7">
+                            <p style="text-align: justify; color: black;">
+                                NOTA: el documento debe ser una imagen, o pdf,
+                                ya que contiene las firmas de los estudiantes,
+                                y tambien toma la fecha de ingreso al sistema.
+                            </p>
+                        </div>
+                        <input name="boton1" type="image" src="~/Content/img/guardar.png" style="height: 50px; margin-top: 10px; width: 50px;">
+                    </div>
+                </form>
+
+                <!--clases practicas-->
+                <form>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <ul style="list-style-type: square">
+                                <li style="color: #27119a; font-size: 30px;">
+                                    <h3 style="padding-left: 10px; text-align: left;">Clases Practicas</h3>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <p></p>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" placeholder="Asignatura:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{4,48}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-2">
+                            <input type="text" class="form-control" placeholder="Grupo:" pattern="([1-5][M|T|N][1-5]-[CO|TQ|EL]{2})" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" placeholder="Agregar Lista de Asistencia:SUBIR DOCUMENTO"><!--------Esto es para subir el documento-------->
+                        </div>
+                        <div class="col-md-1">
+                            <img src="~/Content/img/subir.png" style="height: 25px; margin-top: 10px; width: 25px;" />
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4 style="padding-left: 10px; text-align: left;">Fecha de la Clase:</h4>
+                            <input type="date" class="form-control" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <input type="text" class="form-control" placeholder="Aula:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{4,10}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" placeholder="Metodologia:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{4,25}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-7" style="text-align: left;">
+                            <h4 style="margin-bottom: 0px;">Objetivos:</h4>
+                            <textarea class="form-control" name="dvcpobjetivos" rows="5" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-7" style="text-align: left;">
+                            <h4 style="margin-bottom: 0px;">Observaciones:</h4>
+                            <textarea class="form-control" name="dvcpobservaciones" rows="5" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <input name="boton1" type="image" src="~/Content/img/guardar.png" style="height: 50px; margin-top: 10px; width: 50px;">
+                    </div>
+                </form>
+
+                <!--guias metodologicas-->
+                <form>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <ul style="list-style-type: square">
+                                <li style="color: #27119a; font-size: 30px;">
+                                    <h3 style="padding-left: 10px; text-align: left;">Guias Metodológicas</h3>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <input type="text" class="form-control" placeholder="Asignatura:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{4,48}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" placeholder="Agregar documento:">
+                        </div>
+                        <div class="col-md-1">
+                            <img src="~/Content/img/subir.png" style="height: 25px; margin-top: 10px; width: 25px;" />
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-3">
+                            <h4 style="padding-left: 10px; text-align: left;">Fecha de la Clase:</h4>
+                            <input type="date" class="form-control" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-7"></div>
+                        <input name="boton1" type="image" src="~/Content/img/guardar.png" style="height: 50px; margin-top: 10px; width: 50px;">
+                    </div>
+                </form>
+
+                <!--informes de conferencias-->
+                <form>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <ul style="list-style-type: square">
+                                <li style="color: #27119a; font-size: 30px;">
+                                    <h3 style="padding-left: 10px; text-align: left;">Informe de Conferencias</h3>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <p></p>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" placeholder="Asignatura:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{4,48}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-2">
+                            <input type="text" class="form-control" placeholder="Grupo:" pattern="([1-5][M|T|N][1-5]-[CO|TQ|EL]{2})" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <p></p>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" placeholder="Tema:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{4,28}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <input type="text" class="form-control" placeholder="Asunto:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{4,28}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4 style="padding-left: 10px; text-align: left;">Hora:</h4>
+                            <input type="time" class="form-control" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4 style="padding-left: 10px; text-align: left;">Fecha de Clase:</h4>
+                            <input type="date" class="form-control" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-7" style="text-align: left;">
+                            <h4 style="margin-bottom: 0px;">Contenido:</h4>
+                            <textarea class="form-control" rows="5" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" placeholder="Agregar Lista de Asistencia:">
+                        </div>
+                        <div class="col-md-1">
+                            <img src="~/Content/img/subir.png" style="height: 25px; margin-top: 10px; width: 25px;" />
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-7">
+                            <p style="text-align: justify; color: black;">
+                                NOTA: el documento debe ser una imagen, o pdf,
+                                ya que contiene las firmas de los estudiantes,
+                                y tambien toma la fecha de ingreso al sistema.
+                            </p>
+                        </div>
+                        <input name="boton1" type="image" src="~/Content/img/guardar.png" style="height: 50px; margin-top: 10px; width: 50px;">
+                    </div>
+                </form>
+
+                <!--informes de laboratorios-->
+                <form>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-10">
+                            <ul style="list-style-type: square">
+                                <li style="color: #27119a; font-size: 30px;">
+                                    <h3 style="padding-left: 10px; text-align: left;">Informes de Laboratorios</h3>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <p></p>
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" placeholder="Asignatura:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{4,48}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-2">
+                            <input type="text" class="form-control" placeholder="Grupo:" pattern="([1-5][M|T|N][1-5]-[CO|TQ|EL]{2})" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <p></p>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" placeholder="Laboratorio:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{4,48}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4 style="padding-left: 10px; text-align: left;">Fecha de Clase:</h4>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4 style="padding-left: 10px; text-align: left;">Hora:</h4>
+                            <input type="time" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-9">
+                            <input type="text" class="form-control" placeholder="Agregar Lista de Asistencia:">
+                        </div>
+                        <div class="col-md-1">
+                            <img src="~/Content/img/subir.png" style="height: 25px; margin-top: 10px; width: 25px;" />
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-7">
+                            <p style="text-align: justify; color: black;">
+                                NOTA: el documento debe ser una imagen, o pdf,
+                                ya que contiene las firmas de los estudiantes,
+                                y tambien toma la fecha de ingreso al sistema.
+                            </p>
+                        </div>
+                        <input name="boton1" type="image" src="~/Content/img/guardar.png" style="height: 50px; margin-top: 10px; width: 50px;">
+                    </div>
+                </form>
+                <!-- fin -->
+            </div>
+
+            <div class="col-md-2">
+                <textarea class="form-control" placeholder="AQUI VAN A IR las asignatura de las carreras" name="message" rows="48"></textarea>
+                <!-----------consulta, muestra todas las asignaturas de la carreras de la BD------------>
+            </div>
+        </div>
+    </div>
+</section>

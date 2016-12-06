@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "1AdPlAs";
+    Layout = "~/Views/Shared/_MasterPageLayout.cshtml";
+}
+
+<a name="ancla4"></a>
+<section id="sponsor">
+    <a href="@Url.Action("Administrar","Administracion")#ancla3">
+        <img src="~/Content/img/Regrasar.png" style="height: 50px; margin-left: 0px; width: 50px;" />
+    </a>
+    <h2>INGRESAR PLAN ASIGNATURA</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+
+            <div class="col-md-8">
+                <form>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" placeholder="Plan Asignatura:"required>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-8">
+                            <input type="text" class="form-control" placeholder="Año Academico:" pattern="[1-2][9|0][0-9]{2}" required>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-3">
+                            <h4 style="margin-bottom: 0px;">Fecha del plan:</h4>
+                            <input type="date" name="FechaIni" class="form-control"  value="" required>
+                        </div>
+                        <input name="boton1" type="image" src="~/Content/img/guardar.png" style="height: 50px; margin-top: 50px; width: 50px;">
+                    </div>
+                </form>
+                <form>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <h4 style="margin-bottom: 10px;">Copiar un Plan Asignatura</h4>
+                        <div class="col-md-7">
+                            <input type="text" class="form-control" placeholder="Plan Existente:" required>
+                        </div>
+                        <div class="col-md-1">
+                            <input name="boton1" type="image" src="~/Content/img/buscar.png" style="height: 25px; margin-top: 10px; width: 25px;">
+                        </div>
+                    </div>
+                </form>
+                <form>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" required>
+                        </div>
+                        <div class="col-md-4">
+                            <a href="#" class="btn btn-primary btn-lg" role="button">COPIAR</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

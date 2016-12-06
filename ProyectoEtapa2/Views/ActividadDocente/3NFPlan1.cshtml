@@ -1,0 +1,1652 @@
+﻿@{
+    ViewBag.Title = "4NFPlan1";
+    Layout = "~/Views/Shared/_MasterPageLayout.cshtml";
+}
+
+<section id="sponsor">
+    <a name="ancla4"></a>
+    <a href="@Url.Action("ActivDocMain","ActividadDocente")#ancla3">
+        <img src="~/Content/img/Regrasar.png" style="height: 50px; margin-left: 0px; width: 50px;" />
+    </a>
+
+    <p></p>
+    <!------------DOCUMENTO OFICIAL----------->
+    <h2>PLAN OPERATIVO INDIVIDUAL</h2>
+    <div class="container2">
+        <div class="row">
+            <div class="col-md-1"></div>
+
+            <div class="col-md-10">
+                <!--1) Presentacion de nombre del docente y fecha de entrega -->
+                <!----DATOS---->
+                <!--OLVIDE TODO LO QUE ME DIJO LA PROFESORA ( -_-!)-->
+                <!--primer linea-->
+                <div class="row" style="margin-bottom: 20px;">
+                    <div class="col-md-2">
+                        <h4>Nombre del Docente:</h4>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="AQUI APARECERA EL NOMBRE:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}"><!------sin validacion, esto lo arroja el sistema------->
+                    </div>
+                    <div class="col-md-2">
+                        <h4>Departamento Docente:</h4>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="AQUI APARECE LA CARRERA" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}"><!------sin validacion, esto lo arroja el sistema------->
+                    </div>
+                </div>
+                <!--Segunda linea-->
+                <div class="row" style="margin-bottom: 20px;">
+                    <div class="col-md-2">
+                        <h4>Facultad:</h4>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="AQUI APARECERA LA FACULTAD:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}"><!------sin validacion, esto lo arroja el sistema------->
+                    </div>
+                    <div class="col-md-2">
+                        <h4>Carrera:</h4>
+                    </div>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" placeholder="AQUI APARECE LA CARRERA" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}"><!------sin validacion, esto lo arroja el sistema------->
+                    </div>
+                </div>
+                <!--taecera linea-->
+                <div class="row" style="margin-bottom: 20px;">
+                    <div class="col-md-4">
+
+                    </div>
+                    <div class="col-md-5">
+                        <div class="row" style="margin-bottom: 0px;">
+                            <div class="col-md-6">
+                                <h4>Tipo de Contrato</h4>
+                            </div>
+                            <div class="col-md-3">
+                                <h4>
+                                    <select name="TipoContrato">
+                                        <option value="TC-40">TC-40</option>
+                                        <option value="TC-140">TC-140</option>
+                                        <option value="HE">HE</option>
+                                        <option value="MD">MD</option>
+                                    </select>
+                                </h4>
+                            </div>
+                        </div>
+                    </div>
+                    
+                   
+                </div>
+                <!--cuarta linaea. texto-->
+                <div class="row" style="margin-bottom: 20px; text-align: justify;">
+                    <div class="col-md-11">
+                        <b style="color: black;">
+                            Tipo de Contrato: TC-40: Contrato Fijo 40 Horas. TC-140: Contrato Fijo 140-Horas. HE: Profesor Horario. MD: Medio Tiempo.
+                        </b>
+                    </div>
+                </div>
+                <!----validaciones---->
+                <form>
+                    <!--1) ACTIVIDADES DE VIGENCIA INTERSEMESTRAL E INTERANUAL-->
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-9">
+                            <h4 style="color: black;">1. ACTIVIDADES DE VIGENCIA INTERSEMESTRAL E INTERANUAL</h4><!--esto en negrilla-->
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                    </div>
+                    <!--1.1----------------------------------------------------->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <ul style="list-style-type: square">
+                                <li style="font-size: 50px;">
+                                    <h4>1.1 Elaboracion de:.</h4>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!--1.1.1-->
+                    <div class="row" style="margin-bottom: 10px; background-color:#4800ff; border-radius: 30px; color:white">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <h4>1.1.1 Plan calendario.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br/>
+                            <input type="number" min="1" max="8" class="form-control" required>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS: copia de planes calendarios con VBO del jefe de dpto." rows="8" required></textarea><!---------que va aqui, texto o documento??---------->
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <!--1.1.2-->
+                    <div class="row" style="margin-bottom: 10px; background-color:#4800ff; border-radius: 30px; color:white;">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <h4>1.1.2 Guias y materiales didácticos.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br/>
+                            <input type="number" min="1" max="8" class="form-control" required>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS: copia de guías y materiales elaborados con VBO del jefe dpto." rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <!--1.2----------------------------------------------------->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <ul style="list-style-type: square">
+                                <li style="font-size: 50px;">
+                                    <h4>1.2 Desarrollo de cursos de verano.</h4>
+                                </li>
+                            </ul>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br/>
+                            <input type="number" min="1" max="8" class="form-control" required>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS: copia de actas finales." rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <!--1.3----------------------------------------------------->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <ul style="list-style-type: square">
+                                <li style="font-size: 50px;">
+                                    <h4>1.3 Capacitacion.</h4>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                    <!--1.3.1-->
+                    <div class="row" style="margin-bottom: 10px; background-color:#4800ff; border-radius: 30px; color:white;">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <h4>1.3.1 Pedagógica y/o metodológica.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br />
+                            <input type="number" min="1" max="8" class="form-control" required>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS: certificado, diploma o constancia emitida por la instancia que imparte el curso." rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <!--1.3.2-->
+                    <div class="row" style="margin-bottom: 10px; background-color:#4800ff; border-radius: 30px; color:white;">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <h4>1.3.2 Tecnológica.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br />
+                            <input type="number" min="1" max="8" class="form-control" required>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS: certificado, diploma o constancia emitida por la instancia que imparte el curso." rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <!--1.4----------------------------------------------------->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <ul style="list-style-type: square">
+                                <li style="font-size: 50px;">
+                                    <h4>1.4 Orgenización del expediente de la asignatura.</h4>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br />
+                            <input type="number" min="1" max="8" class="form-control" required><!------------pattern="^([01]?[0-9]|2[0-3]):[0-5][0-9]$"--------Ejemplos:3:34, 03:34, 12:27, 0:05:21, 15:09:21, 23:45:21-------------------->
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS: informe del trabjo realizado con VBO del jefe DPTO." rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <!--1.5----------------------------------------------------->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <ul style="list-style-type: square">
+                                <li style="font-size: 50px;">
+                                    <h4>1.5 Elaboracion del POI.</h4>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br />
+                            <input type="number" min="1" max="8" class="form-control" required>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS: POI elaborado. Elaborado por el docente y con el VBO del jefe del DPTO. Autorizado por el decano." rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <!--------------------------FIN DE 1------------------------>
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-10" style="text-align: left;">
+                            <h4>SUB TOTAL DE HORAS DE ACTIVADEDES DE VIGENCIA INTERSEMESTAL E INTERANUAL.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-2">
+                            <h4>HORAS</h4>
+                            <input type="number" min="10" max="60" class="form-control" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+
+                    <!-----------2) ACTIVIDADES DOCENTES SEMESTRALES------------>
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-9">
+                            <h4 style="color: black;">2. ACTIVIDADES DOCENTES SEMESTRALES</h4><!--esto en negrilla-->
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                    </div>
+                    <!--2.1----------------------------------------------------->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <ul style="list-style-type: square">
+                                <li style="font-size: 50px;">
+                                    <h4>2.1 Horas de docencia directa semanal.</h4>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br />
+                            <input type="number" min="1" max="8" class="form-control" required>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS: reporte de asistencia." rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <!--2.2----------------------------------------------------->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <ul style="list-style-type: square">
+                                <li style="font-size: 50px;">
+                                    <h4>2.2 Horas de consultas para grupos de clases.</h4>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br />
+                            <input type="number" min="1" max="8" class="form-control" required>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS: copia de listado con firma de estudantes." rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <!--2.3----------------------------------------------------->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <ul style="list-style-type: square">
+                                <li style="font-size: 50px;">
+                                    <h4>2.3 Horas de reuniones metodológicas.</h4>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br />
+                            <input type="number" min="1" max="8" class="form-control" required>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS: copia de actas de reunion con firmas de participantes." rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <!--2.4----------------------------------------------------->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <ul style="list-style-type: square">
+                                <li style="font-size: 50px;">
+                                    <h4>2.4 Elaboración de planes diarios de clase.</h4>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br />
+                            <input type="number" min="1" max="8" class="form-control" required>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS: Informes de supervisión del jefe de DPTO." rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <!--2.5----------------------------------------------------->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <ul style="list-style-type: square">
+                                <li style="font-size: 50px;">
+                                    <h4>2.5 Revisión y entrega de calificaciones:</h4>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <!--2.5.1-->
+                    <div class="row" style="margin-bottom: 10px; background-color:#4800ff; border-radius: 30px; color:white;">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <h4>2.5.1 Parciales.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br />
+                            <input type="number" min="1" max="8" class="form-control" required>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS: actas." rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <!--2.5.2-->
+                    <div class="row" style="margin-bottom: 10px; background-color:#4800ff; border-radius: 30px; color:white;">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <h4>2.5.2 Finales.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br />
+                            <input type="number" min="1" max="8" class="form-control" required>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS: actas." rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <!--2.5.3-->
+                    <div class="row" style="margin-bottom: 10px; background-color:#4800ff; border-radius: 30px; color:white;">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <h4>2.5.3 Proyectos.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br />
+                            <input type="number" min="1" max="8" class="form-control" required>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS: actas." rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <!--2.5.4-->
+                    <div class="row" style="margin-bottom: 10px; background-color:#4800ff; border-radius: 30px; color:white;">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <h4>2.5.4 Laboratorios.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br />
+                            <input type="number" min="1" max="8" class="form-control" required>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS: actas." rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <!--2.6----------------------------------------------------->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <ul style="list-style-type: square">
+                                <li style="font-size: 50px;">
+                                    <h4>2.6 Elabora, resuelve y aplica exámenes de suficiencia.</h4>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br />
+                            <input type="number" min="1" max="8" class="form-control" required>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS: actas." rows="8" required></textarea>
+                            <i class="'fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <!--2.7----------------------------------------------------->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <ul style="list-style-type: square">
+                                <li style="font-size: 50px;">
+                                    <h4>2.7 Desarrrolla curso paralelos.</h4>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br />
+                            <input type="number" min="1" max="8" class="form-control" required>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS: copia de actas finales." rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <!--2.8----------------------------------------------------->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <ul style="list-style-type: square">
+                                <li style="font-size: 50px;">
+                                    <h4>2.8 Culminación de estudios: jurado, tutor, etc</h4>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br />
+                            <input type="number" min="1" max="8" class="form-control" required>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS: carta de asignación emitida por el decano." rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <!--2.9----------------------------------------------------->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <ul style="list-style-type: square">
+                                <li style="font-size: 50px;">
+                                    <h4>2.9 Actividades del PAEDUCA</h4>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br />
+                            <input type="number" min="1" max="8" class="form-control" required>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS: carta de asignación emitida por el jefe de Dpto." rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <!--------------------------FIN DE 2------------------------>
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-10" style="text-align: left;">
+                            <h4>SUB TOTAL DE HORAS DE ACTIVADEDES DE DOCENTES SEMESTRALES.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-2">
+                            <h4>HORAS</h4>
+                            <input type="number" min="10" max="60" class="form-control" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+
+                    <!-----------3) ACTIVIDADES DE INVESTIGACIÓN, EXTENSIÓN, AUTOEVALUACIÓN Y MEJORA CURRICULAR------------>
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-9">
+                            <h4 style="color: black;">3. ACTIVIDADES DE INVESTIGACIÓN, EXTENSIÓN, AUTOEVALUACIÓN Y MEJORA CURRICULAR</h4><!--esto en negrilla-->
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                    </div>
+                    <!--3.1----------------------------------------------------->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <ul style="list-style-type: square">
+                                <li style="font-size: 50px;">
+                                    <h4>3.1 Participación y/o organización de ferias cientificas-tecnológicas.</h4>
+                                </li>
+                            </ul>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br />
+                            <input type="number" min="1" max="8" class="form-control" required>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS: informe del responsable de la feria o responsable de comisión." rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <!--3.2----------------------------------------------------->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <ul style="list-style-type: square">
+                                <li style="font-size: 50px;">
+                                    <h4>3.2 Participación en proyectos o actividades de investigación.</h4>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br />
+                            <input type="number" min="1" max="8" class="form-control" required>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS: informes evaluativos del trabajo de investigacion con el VBO del responsable." rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <!--3.3----------------------------------------------------->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <ul style="list-style-type: square">
+                                <li style="font-size: 50px;">
+                                    <h4>3.3 Realización de publicaciones.</h4>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br />
+                            <input type="number" min="1" max="8" class="form-control" required>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS: copia de publicaciones." rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <!--3.4----------------------------------------------------->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <ul style="list-style-type: square">
+                                <li style="font-size: 50px;">
+                                    <h4>3.4 Particiación y/o presentación de resultados de investigación:</h4>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <!--3.4.1-->
+                    <div class="row" style="margin-bottom: 10px; background-color:#4800ff; border-radius: 30px; color:white;">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <h4>3.4.1 En congresos.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br />
+                            <input type="number" min="1" max="8" class="form-control" required>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS: informe de participación elaborado por el docente y constancia o diploma emitido por los organizadores del evento." rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <!--3.4.2-->
+                    <div class="row" style="margin-bottom: 10px; background-color:#4800ff; border-radius: 30px; color:white;">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <h4>3.4.2 Foros, nivel nacional e internacional.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br />
+                            <input type="number" min="1" max="8" class="form-control" required>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS: informe de participación elaborado por el docente y constancia o diploma emitido por los organizadores del evento." rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8" required></textarea>
+                            <i class=" fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <!--3.5----------------------------------------------------->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <ul style="list-style-type: square">
+                                <li style="font-size: 50px;">
+                                    <h4>3.5 Realiza labores de vinculación con la empresa, estado y/o la sociedad.</h4>
+                                </li>
+                            </ul>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br />
+                            <input type="number" min="1" max="8" class="form-control" required>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS: informe de participación elaborado por el decente y constancia o diploma emitido por la organización baneficiada." rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <!--3.6----------------------------------------------------->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <ul style="list-style-type: square">
+                                <li style="font-size: 50px;">
+                                    <h4>3.6 Realización de acciones para el mejoramiento y/o transformación del deseño curricular de la carrera.</h4>
+                                </li>
+                            </ul>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br />
+                            <input type="number" min="1" max="8" class="form-control" required>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS: carta de asignación emitida por el vicerrector o el decano, informes periodicos elaborados poer el docente con VBO del responsable." rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <!--3.7----------------------------------------------------->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <ul style="list-style-type: square">
+                                <li style="font-size: 50px;">
+                                    <h4>3.7 Realización de acciones para autoevaluación de la carrera.</h4>
+                                </li>
+                            </ul>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br />
+                            <input type="number" min="1" max="8" class="form-control" required>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS: carta de asignación emitida por el vicerrector o el decano, informes periodicos elaborados poer el docente con VBO del responsable." rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8" required></textarea>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <!--------------------------FIN DE 3------------------------>
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-10" style="text-align: left;">
+                            <h4>SUB TOTAL DE HORAS DE ACTIVIDADES DE INVESTIGACIÓN, EXTENSIÓN, AUTOEVALUACIÓN Y MEJORA CURRICULAR.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-2">
+                            <h4>HORAS</h4>
+                            <input type="number" min="10" max="60" class="form-control" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+
+                    <!-----------4) OTRAS ACTIVIDADES.------------>
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-9">
+                            <h4 style="color: black;">4. OTRAS ACTIVIDADES</h4><!--esto en negrilla-->
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                    </div>
+                    <!--4.1----------------------------------------------------->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <ul style="list-style-type: square">
+                                <li style="font-size: 50px;">
+                                    <h4>4.1</h4>
+                                </li>
+                            </ul>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control">
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br />
+                            <input type="number" min="1" max="8" class="form-control">
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS:" rows="8"></textarea>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8"></textarea>
+                        </div>
+                    </div>
+                    <!--4.2----------------------------------------------------->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <ul style="list-style-type: square">
+                                <li style="font-size: 50px;">
+                                    <h4>4.2</h4>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control">
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br />
+                            <input type="number" min="1" max="8" class="form-control">
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS:" rows="8"></textarea>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8"></textarea>
+                        </div>
+                    </div>
+                    <!--4.3----------------------------------------------------->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-3" style="text-align: left;">
+                            <ul style="list-style-type: square">
+                                <li style="font-size: 50px;">
+                                    <h4>4.3</h4>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3" style="margin-bottom: 10px;">
+                            <h4>Fecha de entrega/realizacion</h4>
+                            <input type="date" class="form-control">
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <h4>tiempo requerido H/S</h4>
+                            <br />
+                            <input type="number" min="1" max="8" class="form-control">
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="row">
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="EVIDENCIAS:" rows="8"></textarea>
+                        </div>
+                        <p></p>
+                        <div class="col-md-3">
+                            <textarea class="form-control" name="message" placeholder="OBSERVACIONES:" rows="8"></textarea>
+                        </div>
+                    </div>
+                    <!--------------------------FIN DE 4------------------------>
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-6" style="text-align: left;">
+                            <h4>SUB TOTAL DE HORAS DE OTRAS ACTIVIDADES.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-2">
+                            <h4>HORAS</h4>
+                            <input type="number" min="10" max="60" class="form-control">
+                        </div>
+                    </div>
+                    <!----------------------------------------FIN:"TOTAL DE HORAS DE POI DOCENTES"------------------------------------->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <br />
+                        <p></p>
+                        <div class="col-md-1">
+
+                        </div>
+                        <p></p>
+                        <div class="col-md-7" style="text-align: left; color:#4800ff">
+                            <h2>TOTAL DE HORAS DE POI DOCENTES.</h2>
+                        </div>
+                        <p></p>
+                        <div class="col-md-2">
+                            <br/>
+                            <input type="number" min="10" max="200" class="form-control" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                    </div>
+                    <input name="boton1" type="image" src="~/Content/img/documentoPDF.png" style="height: 50px; margin-top: 50px; width: 50px;">
+                </form>
+
+            </div>
+
+        </div>
+        
+
+    </div>
+    <h2 style="color: black;">NO DISPONIBLE PARA MOVILES</h2>
+    <h2 style="color: black;">resolucion insuficiente</h2>
+
+</section>

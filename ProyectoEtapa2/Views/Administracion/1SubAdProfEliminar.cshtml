@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "1SubAdProfEliminar";
+    Layout = "~/Views/Shared/_MasterPageLayout.cshtml";
+}
+<a name="anclaEP"></a>
+@using (Html.BeginForm("EliminProfe", "Administracion", FormMethod.Post))
+{
+<section id="sponsor">
+    <a href="@Url.Action("AdProfesor","Administracion")#ancla2">
+        <img src="~/Content/img/Regrasar.png" style="height: 50px; margin-left: 0px; width: 50px;" />
+    </a>
+    <h2>ELIMINAR DOCENTE</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+
+            <div class="col-md-6">
+                <form>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-11">
+                            <input type="text" class="form-control" name="IDProfe" placeholder="Numero de Emplado:" pattern="[0-9]{4}" required>
+                            <i class="fa fa-check check-ok"></i>
+                        </div>
+                       <!-- <div class="col-md-1">
+                            <input name="boton1" type="image" src="~/Content/img/buscar.png" style="height: 25px; margin-top: 10px; width: 25px;">
+                        </div> -->
+                    </div>
+                    <input name="boton1" type="image" src="~/Content/img/AdmPro/Eliminar.png" style="margin-top: 50px; width: 50px; height: 50px;">
+                </form>
+
+            </div>
+        </div>
+        
+    </div>
+
+</section>
+}

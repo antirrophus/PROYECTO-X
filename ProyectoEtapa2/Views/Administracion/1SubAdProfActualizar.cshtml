@@ -1,0 +1,186 @@
+﻿@model ProyectoEtapa2.Data.Profesor
+
+@{
+    ViewBag.Title = "1SubAdProfActualizar";
+    Layout = "~/Views/Shared/_MasterPageLayout.cshtml";
+}
+<a name="anclaAcP"></a>
+@using (Html.BeginForm("ActualizarProfe", "Administracion", FormMethod.Post))
+{
+<section id="sponsor">
+    <a href="@Url.Action("AdProfesor","Administracion")#ancla2">
+        <img src="~/Content/img/Regrasar.png" style="height: 50px; margin-left: 0px; width: 50px;" />
+    </a>
+    <h2>ACTUALIZAR DOCENTE</h2>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+
+            <div class="col-md-6">
+                
+                    <div class="row" style="margin-bottom: 20px;">
+                        <form>
+                            <div class="col-md-11">
+                                <input type="text" class="form-control" name="IDProfe" placeholder="Numero de Emplado:" pattern="[0-9]{4}" required>
+                                <i class="fa fa-check check-ok"></i>
+                            </div>
+                             <div class="col-md-1">
+                                <input name="boton1" type="image" src="~/Content/img/buscar.png" style="height: 25px; margin-top: 10px; width: 25px;">
+                            </div>
+                       </form>
+                    </div>
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-12">
+                            <input type="text" class="form-control" @Html.DisplayTextFor(model => model.nombre_profesor) @Html.DisplayFor(model => model.apellido_profesor) placeholder="Nombres y Apellidos: AQUI APARECE EL NOMBRE ">
+                            <!--aqui se presentaria el Nombre -->
+                        </div>
+                    </div>
+                <!--RESULTADO DE LA BUSQUEDA-->
+                    <form>
+                        <div class="row" style="margin-bottom: 20px;"><!--telfono y departamento-->
+                            
+                            <p></p>
+                            <div class="col-md-7">
+                                <input type="text" class="form-control" placeholder="Departamento:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-(0-9)]{2,48}" required><!----el id del departamento o el nombre---->
+                                <i class="fa fa-check check-ok"></i><!----------------consulta, todos los departementos sin importar la carrera.------------------->
+                            </div>
+                            <p></p>
+                            <div class="col-md-5">
+                                <input type="tel" class="form-control" @Html.DisplayFor(model => model.telefono) placeholder="Telefono:" pattern="[0-9]{8}" required>
+                                <i class="fa fa-check check-ok"></i>
+                            </div>
+                        </div>
+
+                        <div class="row" style="margin-bottom: 20px;">
+                            
+                            <div class="col-md-7">
+                                <textarea class="form-control" placeholder="AQUI VAN A IR LOS departaemtos de LA CARRERA" name="message" rows="9"></textarea>
+                            </div>
+                            <div class="col-md-5"></div>
+                        </div>
+                        <!--Email y nivel academico-->
+                        <div class="row" style="margin-bottom: 0px;">
+                            <p></p>
+                            <div class="col-md-7">
+                                <input type="email" class="form-control" @Html.DisplayFor(model => model.correo) placeholder="Email:" required>
+                                <i class="fa fa-check check-ok"></i>
+                            </div>
+                            <p></p>
+                            <div class="col-md-5"><!--Nivel academico-->
+                                <div class="row" style="margin-bottom: 0px;">
+                                    <div class="col-md-7">
+                                        <h4>Nivel Academico</h4>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h4>
+                                            <select>
+                                                <option value="Ing.">Ing.</option>
+                                                <option value="MSc.">MSc.</option>
+                                                <option value="Lic.">Lic.</option>
+                                                <option value="Tkl.">Tkl.</option>
+                                                <option value="Dr.">Dr.</option>
+                                                <option value="MBA">MBA</option>
+                                                <option value="Esp">Esp</option>
+                                                <option value="TS">TS</option>
+                                            </select>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--tipo de comtrato y cargo-->
+                        <div class="row" style="margin-bottom: 0px;">
+                            <p></p>
+                            <div class="col-md-6"><!--Tipo de contrato-->
+                                <div class="row" style="margin-bottom: 0px;">
+                                    <div class="col-md-7">
+                                        <h4>Tipo de Contrato</h4>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <h4>
+                                            <select>
+                                                <option value="TC-40">TC-40</option>
+                                                <option value="TC-140">TC-140</option>
+                                                <option value="HE">HE</option>
+                                                <option value="MD">MD</option>
+                                            </select>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <p></p>
+                            <div class="col-md-4"><!--Cargo-->
+                                <div class="row" style="margin-bottom: 0px;">
+                                    <div class="col-md-5">
+                                        <h4>Cargo</h4>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <h4>
+                                            <select>
+                                                <option value="NULL"></option>
+                                                <option value="1">Jefe Departamento</option>
+                                            </select>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <p></p>
+                        </div>
+                        <!--Tipo de carga-->
+                        <div class="row" style="margin-bottom: 0px;">
+                            <p></p>
+                            <div class="col-md-5">
+                                <div class="row" >
+                                    <div class="col-md-8">
+                                        <h4>Tipo de Carga</h4>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <h4>
+                                            <select>
+                                                <option value="R">R</option>
+                                                <option value="HI">HI</option>
+                                                <option value="HE">HE</option>
+                                                <option value="MD">MD</option>
+                                                <option value="P">P</option>
+                                            </select>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <p></p>
+                            <div class="col-md-2">
+                            
+                            </div>
+                            <p></p>
+                            <div class="col-md-3">
+                            
+                            </div>
+                            <p></p>
+                        </div>
+                        <br/>
+                        <!--Comentarios-->
+                        <div class="row" style="margin-bottom: 20px; text-align: justify;">
+                            <div class="col-md-12">
+                                <b style="color: black;">
+                                    Nivel Académico: TS: Técnico Superior, Lic.: Licenciado. Ing.: Ingeniero. Esp:Especialista. MBA: Master en Admon de Empresas. MSc.: Master en Ciencias Dr.: Director.
+                                </b>
+                                <p></p>
+                                <b style="color: black;">
+                                    Tipo de Contrato: TC-40: Contrato Fijo 40 Horas. TC-140: Contrato Fijo 140-Horas. HE: Profesor Horario. MD: Medio Tiempo.
+                                </b>
+                                <p></p>
+                                <b style="color: black;">
+                                    Tipo de Carga: P: Posgrado. R: Regular o de Planta. HI Horario Interno HE: Horario Externo MD: Medio Tiempo.
+                                </b>
+                            </div>
+                        </div>
+                        <input name="boton1" type="image" src="~/Content/img/AdmPro/Actualizar.png" style=" height: 50px; margin-top: 50px; width: 50px;">
+                    </form>
+            </div>
+        </div>
+        
+    </div>
+
+</section>
+}

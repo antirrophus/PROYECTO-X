@@ -1,0 +1,381 @@
+﻿@{
+    ViewBag.Title = "3NFPlan3p1";
+    Layout = "~/Views/Shared/_MasterPageLayout.cshtml";
+}
+
+<section id="sponsor">
+    <a name="ancla4"></a>
+    <a href="@Url.Action("ActivDocMain","ActividadDocente")#ancla3">
+        <img src="~/Content/img/Regrasar.png" style="height: 50px; margin-left: 0px; width: 50px;" />
+    </a>
+
+    <p></p>
+    <!------------DOCUMENTO OFICIAL----------->
+    <h2>INFORME ACDÉMICO POR GRUPO DE CLASES ASISTIDO EN SEMESTRE</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-1"></div>
+
+            <div class="col-md-10">
+                <form>
+                    <!--1) Presentacion de docente y fecha de llenado :v-----dice michael que cooloquemos un contador de cuantos va a guardar ejemplo 1/8, 2/8, 3/8 ó 1/6-->
+                    <div class="row" style="margin-bottom: 20px;">
+                        <div class="col-md-3">
+                            <h4>Nombre del Docente:</h4>
+                        </div>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" placeholder="AQUI APARECERA EL NOMBRE:" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}">
+                        </div>
+                        <div class="col-md-2">
+                            <h4>Fecha de llenado:</h4>
+                        </div>
+                        <div class="col-md-2">
+                            <input type="text" class="form-control" placeholder="X/XX/XXXX">
+                        </div>
+                    </div>
+
+                    <!--2) encabezado-->
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <!--poner un background color y un border raduius aqui para llamar la atencion-->
+                        <p></p>
+                        <div class="col-md-5">
+                            <h4 style="color: black;">PARTICIPA EN LAS TAREAS DE LA FACULTAD:</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-5">
+                            <h4 style="color: #27119a;">EXPLIQUE SU PARTICIPACIÓN:</h4><!--esto en negrilla-->
+                        </div>
+                    </div>
+                    <!--texto en rojo Coloque 0 (participación nula), 1(si apoyo medianamente), ó 2 (apoyo total) en cada ítem según usted crea-->
+                    <h4 style="margin-bottom: 0px; color: red;">Coloque 0 (participación nula), 1(si apoyo medianamente), ó 2 (apoyo total) en cada ítem según usted crea</h4>
+                    <!--Rellenar datos-->
+                    <!--primera linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-5" style="text-align: left;">
+                            <h4>Extensión universitaria, emprendedurismo:</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="text" class="form-control" pattern="[0|1|2]" required style="border: 2px solid red; height: 40px; width: 50px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{6,80}" required>
+                        </div>
+                    </div>
+                    <!--segunda linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-5" style="text-align: left;">
+                            <h4>Participación en tareas de Feria:</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="text" class="form-control" pattern="[0|1|2]" required style="border: 2px solid red; height: 40px; width: 50px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{6,80}" required>
+                        </div>
+                    </div>
+                    <!--tercera linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-5" style="text-align: left;">
+                            <h4>Apoyo de trabajo metodológico en Depto:</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="text" class="form-control" pattern="[0|1|2]" required style="border: 2px solid red; height: 40px; width: 50px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{6,80}" required>
+                        </div>
+                    </div>
+                    <!--cuarta linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-5" style="text-align: left;">
+                            <h4>Participación en  los planes de capacitación:</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="text" class="form-control" pattern="[0|1|2]" required style="border: 2px solid red; height: 40px; width: 50px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{6,80}" required>
+                        </div>
+                    </div>
+                    <!--quita linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-5" style="text-align: left;">
+                            <h4>Culminación de estudios, jurado, tutor, etc:</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="text" class="form-control" pattern="[0|1|2]" required style="border: 2px solid red; height: 40px; width: 50px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{6,80}" required>
+                        </div>
+                    </div>
+
+                    <!--3) RESPONDA SI Ó NO-->
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <p></p>
+                        <div class="col-md-5">
+                            <h4 style="color: black;">RESPONDA A LAS SIGUIENTES PREGUNTAS</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-5">
+                            <h4 style="color: #27119a;">OBSERVACIONES:</h4><!--esto en negrilla-->
+                        </div>
+                    </div>
+                    <!--texto en rojo-->
+                    <h4 style="margin-bottom: 0px; color: red;">Coloque SI ó NO en cada ítem según usted crea</h4>
+                    <!--Rellenar datos-->
+                    <!--primera linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-5" style="text-align: left;">
+                            <h4>Se le aplicó el PAEDUCA.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="text" class="form-control" pattern="(si|no)" required style="border: 2px solid red; height: 40px; width: 50px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{6,80}" required>
+                        </div>
+                    </div>
+                    <!--segunda linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-5" style="text-align: left;">
+                            <h4>Presentó exámenes parciales y de suficiencia al J' del departamento.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="text" class="form-control" pattern="(si|no)" required style="border: 2px solid red; height: 40px; width: 50px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{6,80}" required>
+                        </div>
+                    </div>
+                    <!--tercera linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-5" style="text-align: left;">
+                            <h4>Adjuntó documentos para el expediente de asignatura.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="text" class="form-control" pattern="(si|no)" required style="border: 2px solid red; height: 40px; width: 50px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{6,80}" required>
+                        </div>
+                    </div>
+                    <!--cuarta linea-->
+                    <div class="row" style="margin-bottom: 10px;">
+                        <p></p>
+                        <div class="col-md-5" style="text-align: left;">
+                            <h4>Asiste a reuniones metodológicas.</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                            <input type="text" class="form-control" pattern="(si|no)" required style="border: 2px solid red; height: 40px; width: 50px;">
+                        </div>
+                        <p></p>
+                        <div class="col-md-5">
+                            <input type="text" class="form-control" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{6,80}" required>
+                        </div>
+                    </div>
+
+                    <!--4) Si ha participado en proyectos de investigación, escriba el nombre del  proyecto y su participación-->
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-9">
+                            <h4 style="color: black;">SI HA PARTICIPADO EN PROYECTOS DE INVESTICIGACIÓN, ESCRIBA EL NOMBRE DEL PROYECTO Y SU PARTICIPACIÓN</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                    </div>
+                    <textarea class="form-control" name="message" rows="12" required></textarea>
+                    <br />
+
+                    <!--5) Si coordina pasantias estudiantiles-->
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-9">
+                            <h4 style="color: black;">SI COORDINA PASANTIAS ESTUDIANTILES EXPLIQUE:</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                    </div>
+                    <textarea class="form-control" name="message" rows="12" required></textarea>
+                    <br />
+
+                    <!--6) Si en este semestre a realizado alguna publicación, explique:-->
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-9">
+                            <h4 style="color: black;">SI EN ESTE SEMESTRE A REALIZADO ALGUNA PUBLICACION, EXPLIQUE:</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                    </div>
+                    <textarea class="form-control" name="message" rows="12" required></textarea>
+                    <br />
+
+                    <!--7) En este semestre ha participado en congresos, foros, seminarios, etc. explique:-->
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-9">
+                            <h4 style="color: black;">EN ESTE SEMESTRE HA PARTICIPADO EN CONGRESOS, FORS, SEMINARIOS, ETC. EXPLIQUE:</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                    </div>
+                    <textarea class="form-control" name="message" rows="12" required></textarea>
+                    <br />
+
+                    <!--8) Ha recibido cursos  posgraduados en su profesión durante el semestre, explique:-->
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-9">
+                            <h4 style="color: black;">HA RECIBIDO CURSOS POSGRADOS EN SU PROFESIÓN DURANTE EL SEMESTRE, EXPLIQUE:</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                    </div>
+                    <textarea class="form-control" name="message" rows="12" required></textarea>
+                    <br />
+
+                    <!--9) Ha recibido cursos pedagógicos durante el semestre, explique:-->
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-9">
+                            <h4 style="color: black;">HA RECIBIDO CURSOS PEDAGÓGICOS DURANTE EL SEMESTRE, EXPLIQUE:</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                    </div>
+                    <textarea class="form-control" name="message" rows="12" required></textarea>
+                    <br />
+
+                    <!--10) Cantidad de horas de consultas a estudiantes :-->
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-9">
+                            <h4 style="color: black;">CANTIDAD DE HORAS DE CONSULTAS A ESTUDIANTES:</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                    </div>
+                    <textarea class="form-control" name="message" rows="12" required></textarea>
+                    <br />
+
+                    <!--11) Enumere Logros del proceso enseñanza aprendizaje del semestre / grupo - Escriba continuo-->
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-9">
+                            <h4 style="color: black;">ENUMERE LOGROS DEL PROCESO ENSEÑANZA APRENDIZAJE DEL SEMESTRE/GRUPO-ESCRIBA CONTINUO</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                    </div>
+                    <textarea class="form-control" name="message" rows="12" required></textarea>
+                    <br />
+
+                    <!--12) Enumere las dificultades que se le presentaron para el  desarrollo del curso -  Escriba continuo-->
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-9">
+                            <h4 style="color: black;">ENUMERE LAS DIFICULTADES QUE SE LE PRESENTARON PARA EL DESARROLLO DEL CURSO-ESCRIBA CONTINUO</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                    </div>
+                    <textarea class="form-control" name="message" rows="12" required></textarea>
+                    <br />
+
+                    <!--13) Enumere recomendaciones para mejorar el proceso enseñanza aprendizaje - Escriba continuo-->
+                    <div class="row" style="margin-bottom: 10px; background-color: #808080; border-radius: 5px;">
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                        <p></p>
+                        <div class="col-md-9">
+                            <h4 style="color: black;">ENUMERE RECOMENDACIONES PARA MEJORAR EL PROCESO ENSEÑANZA APRENDIZAJE-ESCRIBA CONTINUO</h4>
+                        </div>
+                        <p></p>
+                        <div class="col-md-1">
+                        </div>
+                    </div>
+                    <textarea class="form-control" name="message" rows="12" required></textarea>
+                    <br />
+                    <!---------<a href="@Url.Action("IAGCAS2","ActividadDocente")#anclaSG">
+                        <input name="boton1" type="image" src="~/Content/img/siguiente.png" style="height: 50px; margin-top: 50px; width: 50px;">
+                    </a>--------->
+                </form>
+                <!-------temporal--------><a href="@Url.Action("IAGCAS2","ActividadDocente")#anclaSG">
+                    <input name="boton1" type="image" src="~/Content/img/siguiente.png" style="height: 50px; margin-top: 50px; width: 50px;">
+                </a>
+            </div>
+        </div>
+        
+        
+    </div>
+
+</section>
